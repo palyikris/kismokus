@@ -1,0 +1,84 @@
+@import "../../uniform/style.module";
+
+.footer {
+  @include centerDiv(row);
+  color: white;
+  background-color: $main;
+  padding: 4rem 2rem;
+  margin-top: 5rem;
+
+  .logoContainer {
+    @include centerDiv(column);
+
+    .logo {
+      width: 12rem;
+      height: 10rem;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    .logoDescription {
+      @include centerDiv(column);
+      align-items: flex-start;
+
+      h1 {
+        font-size: 25px;
+        margin: 5rem 0 1rem 0;
+      }
+    }
+  }
+
+  .else {
+    @include centerDiv(row);
+
+    .documents {
+      @include centerDiv(column);
+
+      a {
+        margin: 1rem 0;
+        color: white;
+      }
+    }
+
+    .social {
+      @include centerDiv(column);
+      border-left: 1px solid white;
+      padding-left: 1rem;
+
+
+
+      .socialApps {
+        @include centerDiv(column);
+        margin-top: 1rem;
+
+        p {
+          margin: 0 0.5rem;
+          font-weight: 400;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .footer .else {
+    flex-direction: column;
+
+    .social {
+      border: none;
+      border-top: 1px solid white;
+      padding-top: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .footer {
+    flex-direction: column;
+
+    .else {
+      margin-top: 6rem;
+    }
+  }
+}

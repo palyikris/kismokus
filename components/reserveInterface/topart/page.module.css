@@ -1,0 +1,738 @@
+@charset "UTF-8";
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.container .apartman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  transition: all 0.5s;
+  border: 1px solid #daa06d;
+  padding: 1rem 1rem 1rem 0;
+  margin: 1rem 0;
+  position: relative;
+}
+.container .apartman .radioItem [type=radio] {
+  display: none;
+}
+.container .apartman .radioItem + .radioItem {
+  margin-top: 15px;
+}
+.container .apartman .radioItem label {
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  min-width: 50px;
+  white-space: nowrap;
+  position: relative;
+  transition: 0.4s ease-in-out 0s;
+}
+.container .apartman .radioItem label::after,
+.container .apartman .radioItem label::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  left: 19px;
+  top: calc(50% - 12px);
+  border: 3px solid #daa06d;
+  transition: all 0.6s;
+}
+.container .apartman .radioItem label::before {
+  background: #daa06d;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(5);
+}
+.container .apartman .radioItem [type=radio]:checked ~ label {
+  border-color: #daa06d;
+}
+.container .apartman .radioItem [type=radio]:checked ~ label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.container .apartman .currencyWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  border-radius: 20px;
+  border: 1px solid #daa06d;
+  z-index: 1000;
+}
+.container .apartman .currencyWrapper button {
+  border: none;
+  background-color: white;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: #daa06d;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.container .apartman .currencyWrapper button:nth-child(1) {
+  border-radius: 20px 0 0 20px;
+}
+.container .apartman .currencyWrapper button:nth-child(2) {
+  border-radius: 0 20px 20px 0;
+}
+.container .apartman .currencyWrapper button:hover {
+  background-color: #daa06d;
+  color: white;
+}
+.container .apartman .currencyWrapper .active {
+  background-color: #daa06d;
+  color: white;
+}
+.container .apartman:nth-child(1) .details .pic {
+  background-image: url("../../../public/apartman/1/Balatonlelle_Nádor_1-es_Szoba1.jpg");
+}
+.container .apartman:nth-child(2) .details .pic {
+  background-image: url("../../../public/apartman/2/Balatonlelle_Nádor_2-es_Szoba.jpg");
+}
+.container .apartman:nth-child(3) .details .pic {
+  background-image: url("../../../public/apartman/3/Balatonlelle_Nádor_3-as_Nappali.jpg");
+}
+.container .apartman:nth-child(4) .details .pic {
+  background-image: url("../../../public/apartman/4/Balatonlelle_Nádor_4-es_Szoba1.jpg");
+}
+.container .apartman:nth-child(1) .details .pic1 {
+  background-image: url("../../../public/topart/2/Dream Tópart_1 emelet_Bal apartman_Szoba_1_2.jpg");
+}
+.container .apartman:nth-child(2) .details .pic1 {
+  background-image: url("../../../public/topart/1/Dream Tópart_1 emelet_Jobb apartman_Konyha_1.jpg");
+}
+.container .apartman:nth-child(3) .details .pic1 {
+  background-image: url("../../../public/apartman/3/Balatonlelle_Nádor_3-as_Nappali.jpg");
+}
+.container .apartman .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+}
+.container .apartman .details .pic,
+.container .apartman .details .pic1 {
+  background-image: url("../../../public/lellehazdark.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 10rem;
+  height: 10rem;
+  transition: all 0.5s;
+  position: relative;
+}
+.container .apartman .details .pic::after,
+.container .apartman .details .pic1::after {
+  content: "Képek";
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(47, 72, 88, 0.5);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.container .apartman .details .pic p,
+.container .apartman .details .pic1 p {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #daa06d;
+  color: white;
+  font-size: 0.8rem;
+}
+.container .apartman .details .pic:hover,
+.container .apartman .details .pic1:hover {
+  cursor: pointer;
+}
+.container .apartman .details .pic:hover::after,
+.container .apartman .details .pic1:hover::after {
+  opacity: 1;
+}
+.container .apartman .details .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  cursor: pointer;
+}
+.container .apartman .details .text h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.container .apartman .details .text .sep {
+  width: 40%;
+  height: 1px;
+  position: relative;
+  background-color: #daa06d;
+  margin: 1rem 0;
+}
+.container .apartman .details .text .sep::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  z-index: 10;
+  top: calc(50% - 0.55rem);
+  left: calc(50% - 0.55rem);
+  border: 1px solid #daa06d;
+}
+.container .apartman .details .text .desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  width: 90%;
+}
+.container .apartman .details .text .desc p {
+  text-align: center;
+  margin: 0;
+}
+.container .apartman .details .text .desc .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 1rem;
+}
+.container .apartman .details .text .services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: 90%;
+  background-color: #daa06d;
+  padding: 0.5rem;
+}
+.container .apartman .details .text .services .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: 25%;
+  margin: 0 0.5rem;
+}
+.container .apartman .details .text .services .service svg {
+  width: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.container .apartman .details .text .services .service p {
+  margin-top: 0;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 715px) {
+  .container .apartman {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+  }
+  .container .apartman .radioItem label::after,
+  .container .apartman .radioItem label::before {
+    left: 0;
+  }
+  .container .apartman .details {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .container .apartman .details .text .services {
+    margin: 3rem 0;
+  }
+  .container .apartman::after, .container .apartman::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    background-color: #daa06d;
+    top: 0;
+  }
+  .container .apartman::before {
+    left: 0;
+  }
+  .container .apartman::after {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .container .apartman {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+    width: 80%;
+  }
+  .container .apartman .radioItem label::after,
+  .container .apartman .radioItem label::before {
+    left: 0;
+  }
+  .container .apartman .details {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .container .apartman .details .text .services {
+    margin: 3rem 0;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service svg {
+    width: 2rem;
+    color: white;
+  }
+  .container .apartman .details .text .services .service p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .container .apartman {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+    width: 80%;
+  }
+  .container .apartman .radioItem label::after,
+  .container .apartman .radioItem label::before {
+    left: 0;
+  }
+  .container .apartman .details {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .container .apartman .details .text .services {
+    margin: 3rem 0;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service svg {
+    width: 2rem;
+    color: white;
+  }
+  .container .apartman .details .text .services .service p {
+    text-align: center;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.container .apartman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  transition: all 0.5s;
+  border: 1px solid #daa06d;
+  padding: 1rem 1rem 1rem 0;
+  margin: 1rem 0;
+  position: relative;
+}
+.container .apartman .radioItem [type=radio] {
+  display: none;
+}
+.container .apartman .radioItem + .radioItem {
+  margin-top: 15px;
+}
+.container .apartman .radioItem label {
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  min-width: 50px;
+  white-space: nowrap;
+  position: relative;
+  transition: 0.4s ease-in-out 0s;
+}
+.container .apartman .radioItem label::after,
+.container .apartman .radioItem label::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  left: 19px;
+  top: calc(50% - 12px);
+  border: 3px solid #daa06d;
+  transition: all 0.6s;
+}
+.container .apartman .radioItem label::before {
+  background: #daa06d;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(5);
+}
+.container .apartman .radioItem [type=radio]:checked ~ label {
+  border-color: #daa06d;
+}
+.container .apartman .radioItem [type=radio]:checked ~ label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.container .apartman .currencyWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  border-radius: 20px;
+  border: 1px solid #daa06d;
+  z-index: 1000;
+}
+.container .apartman .currencyWrapper button {
+  border: none;
+  background-color: white;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: #daa06d;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.container .apartman .currencyWrapper button:nth-child(1) {
+  border-radius: 20px 0 0 20px;
+}
+.container .apartman .currencyWrapper button:nth-child(2) {
+  border-radius: 0 20px 20px 0;
+}
+.container .apartman .currencyWrapper button:hover {
+  background-color: #daa06d;
+  color: white;
+}
+.container .apartman .currencyWrapper .active {
+  background-color: #daa06d;
+  color: white;
+}
+.container .apartman:nth-child(1) .details .pic {
+  background-image: url("../../../public/apartman/1/Balatonlelle_Nádor_1-es_Szoba1.jpg");
+}
+.container .apartman:nth-child(2) .details .pic {
+  background-image: url("../../../public/apartman/2/Balatonlelle_Nádor_2-es_Szoba.jpg");
+}
+.container .apartman:nth-child(3) .details .pic {
+  background-image: url("../../../public/apartman/3/Balatonlelle_Nádor_3-as_Nappali.jpg");
+}
+.container .apartman:nth-child(4) .details .pic {
+  background-image: url("../../../public/apartman/4/Balatonlelle_Nádor_4-es_Szoba1.jpg");
+}
+.container .apartman:nth-child(1) .details .pic1 {
+  background-image: url("../../../public/topart/2/Dream Tópart_1 emelet_Bal apartman_Szoba_1_2.jpg");
+}
+.container .apartman:nth-child(2) .details .pic1 {
+  background-image: url("../../../public/topart/1/Dream Tópart_1 emelet_Jobb apartman_Konyha_1.jpg");
+}
+.container .apartman:nth-child(3) .details .pic1 {
+  background-image: url("../../../public/apartman/3/Balatonlelle_Nádor_3-as_Nappali.jpg");
+}
+.container .apartman .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+}
+.container .apartman .details .pic,
+.container .apartman .details .pic1 {
+  background-image: url("../../../public/lellehazdark.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 10rem;
+  height: 10rem;
+  transition: all 0.5s;
+  position: relative;
+}
+.container .apartman .details .pic::after,
+.container .apartman .details .pic1::after {
+  content: "Képek";
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(47, 72, 88, 0.5);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.container .apartman .details .pic p,
+.container .apartman .details .pic1 p {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #daa06d;
+  color: white;
+  font-size: 0.8rem;
+}
+.container .apartman .details .pic:hover,
+.container .apartman .details .pic1:hover {
+  cursor: pointer;
+}
+.container .apartman .details .pic:hover::after,
+.container .apartman .details .pic1:hover::after {
+  opacity: 1;
+}
+.container .apartman .details .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  cursor: pointer;
+}
+.container .apartman .details .text h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.container .apartman .details .text .sep {
+  width: 40%;
+  height: 1px;
+  position: relative;
+  background-color: #daa06d;
+  margin: 1rem 0;
+}
+.container .apartman .details .text .sep::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  z-index: 10;
+  top: calc(50% - 0.55rem);
+  left: calc(50% - 0.55rem);
+  border: 1px solid #daa06d;
+}
+.container .apartman .details .text .desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  width: 90%;
+}
+.container .apartman .details .text .desc p {
+  text-align: center;
+  margin: 0;
+}
+.container .apartman .details .text .desc .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 1rem;
+}
+.container .apartman .details .text .services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: 90%;
+  background-color: #daa06d;
+  padding: 0.5rem;
+}
+.container .apartman .details .text .services .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: 25%;
+  margin: 0 0.5rem;
+}
+.container .apartman .details .text .services .service svg {
+  width: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.container .apartman .details .text .services .service p {
+  margin-top: 0;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 715px) {
+  .container .apartman {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+  }
+  .container .apartman .radioItem label::after,
+  .container .apartman .radioItem label::before {
+    left: 0;
+  }
+  .container .apartman .details {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .container .apartman .details .text .services {
+    margin: 3rem 0;
+  }
+  .container .apartman::after, .container .apartman::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    background-color: #daa06d;
+    top: 0;
+  }
+  .container .apartman::before {
+    left: 0;
+  }
+  .container .apartman::after {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .container .apartman {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+    width: 80%;
+  }
+  .container .apartman .radioItem label::after,
+  .container .apartman .radioItem label::before {
+    left: 0;
+  }
+  .container .apartman .details {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .container .apartman .details .text .services {
+    margin: 3rem 0;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service svg {
+    width: 2rem;
+    color: white;
+  }
+  .container .apartman .details .text .services .service p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .container .apartman {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+    width: 80%;
+  }
+  .container .apartman .radioItem label::after,
+  .container .apartman .radioItem label::before {
+    left: 0;
+  }
+  .container .apartman .details {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .container .apartman .details .text .services {
+    margin: 3rem 0;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .container .apartman .details .text .services .service svg {
+    width: 2rem;
+    color: white;
+  }
+  .container .apartman .details .text .services .service p {
+    text-align: center;
+  }
+}
+.container .apartman .details .text p {
+  width: 90%;
+}/*# sourceMappingURL=page.module.css.map */

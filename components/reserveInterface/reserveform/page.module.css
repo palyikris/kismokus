@@ -1,0 +1,284 @@
+@charset "UTF-8";
+.reserveForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid #daa06d;
+  margin-top: 5rem;
+  /* From Uiverse.io by Gaurav-WebDev */
+}
+.reserveForm .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+.reserveForm .details p {
+  width: 50%;
+  color: #C35355;
+  text-align: center;
+  margin: 3rem 0;
+}
+.reserveForm .details div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: auto;
+  justify-content: flex-end;
+  border: 1px solid #daa06d;
+}
+.reserveForm .details div label {
+  width: 100%;
+  text-align: center;
+  padding: 0 2rem;
+}
+.reserveForm .details div .copyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  padding: 0.5rem;
+  border: none;
+  border-left: 1px solid #daa06d;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.reserveForm .details div .copyButton:hover {
+  cursor: pointer;
+  background-color: rgba(218, 160, 109, 0.1);
+}
+.reserveForm .details div .copyButton svg {
+  width: 1.5rem;
+  color: #daa06d;
+}
+.reserveForm h3 {
+  font-size: 35px;
+  width: 80%;
+  text-align: center;
+}
+.reserveForm .sep {
+  width: 50%;
+  height: 1px;
+  position: relative;
+  background-color: #daa06d;
+  margin: 3rem 0;
+}
+.reserveForm .sep::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  z-index: 10;
+  top: calc(50% - 0.55rem);
+  left: calc(50% - 0.55rem);
+  border: 1px solid #daa06d;
+}
+.reserveForm .data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  margin: 1.5rem 0;
+}
+.reserveForm .data svg {
+  width: 2rem;
+  margin-right: 1rem;
+  color: #daa06d;
+}
+.reserveForm .data .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  width: 60%;
+}
+.reserveForm .data .input p {
+  width: 100%;
+  text-align: left;
+  color: rgba(218, 160, 109, 0.5);
+  font-size: small;
+  font-style: italic;
+}
+.reserveForm .data .input .group {
+  position: relative;
+  width: 100%;
+}
+.reserveForm .data .input .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(218, 160, 109, 0.7);
+  background: transparent;
+  color: #2f4858;
+}
+.reserveForm .data .input .input:focus {
+  outline: none;
+}
+.reserveForm .data .input .label {
+  color: rgba(218, 160, 109, 0.7);
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.reserveForm .data .input .input:not(:-moz-placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #daa06d;
+}
+.reserveForm .data .input .input:focus ~ label,
+.reserveForm .data .input .input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #daa06d;
+}
+.reserveForm .data .input .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.reserveForm .data .input .bar:before,
+.reserveForm .data .input .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #daa06d;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.reserveForm .data .input .bar:before {
+  left: 50%;
+}
+.reserveForm .data .input .bar:after {
+  right: 50%;
+}
+.reserveForm .data .input .input:focus ~ .bar:before,
+.reserveForm .data .input .input:focus ~ .bar:after {
+  width: 50%;
+}
+.reserveForm .data .input .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.reserveForm .data .input .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+@keyframes inputHighlighter {
+  from {
+    background: #daa06d;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+.reserveForm .calendarData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.reserveForm .calendarData .calendar {
+  padding: 1rem 0;
+}
+.reserveForm .calendarData .calendar label {
+  margin-top: 1rem;
+}
+.reserveForm .button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  margin: 3rem 0;
+  border: 1.5px solid #daa06d;
+}
+.reserveForm .button,
+.reserveForm .type1 {
+  background-color: transparent;
+}
+.reserveForm .button span,
+.reserveForm .type1 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: auto;
+}
+.reserveForm .button span svg,
+.reserveForm .type1 span svg {
+  width: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.reserveForm .type1 .after {
+  height: 50px;
+  width: 200px;
+  background-color: #daa06d;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.reserveForm .type1 .before {
+  content: "Foglalás";
+  height: 50px;
+  width: 200px;
+  color: #daa06d;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.reserveForm .type1:hover .after {
+  transform: translateY(0) scale(1.2);
+}
+.reserveForm .type1:hover .before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+.reserveForm .type1:active .after svg {
+  transform: translateY(0) scale(1.1);
+}/*# sourceMappingURL=page.module.css.map */

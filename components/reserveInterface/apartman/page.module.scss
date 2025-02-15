@@ -1,0 +1,378 @@
+@import "../../../uniform/style.module";
+
+@mixin ApartmanStyle() {
+  .container {
+    @include centerDiv(column);
+    margin-top: 5rem;
+
+    .apartman {
+      @include centerDiv(row);
+      @include radioItemOnReservation();
+      transition: all 0.5s;
+      border: 1px solid $main;
+      padding: 1rem 1rem 1rem 0;
+      margin: 1rem 0;
+      position: relative;
+
+      .currencyWrapper {
+        position: absolute;
+        @include centerDiv(row);
+        top: 1rem;
+        left: 1rem;
+        width: auto;
+        border-radius: 20px;
+        border: 1px solid $main;
+        z-index: 1000;
+
+        button {
+          border: none;
+          background-color: white;
+          padding: 0 .5rem;
+          font-size: 1rem;
+          color: $main;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:nth-child(1) {
+            border-radius: 20px 0 0 20px;
+          }
+
+          &:nth-child(2) {
+            border-radius: 0 20px 20px 0;
+          }
+
+          &:hover {
+            background-color: $main;
+            color: white;
+          }
+        }
+
+        .active {
+          background-color: $main;
+          color: white;
+        }
+      }
+
+      &:nth-child(1) {
+        .details {
+          .pic {
+            background-image: url("../../../public/apartman/1/Balatonlelle_Nádor_1-es_Szoba1.jpg");
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .details {
+          .pic {
+            background-image: url("../../../public/apartman/2/Balatonlelle_Nádor_2-es_Szoba.jpg");
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .details {
+          .pic {
+            background-image: url("../../../public/apartman/3/Balatonlelle_Nádor_3-as_Nappali.jpg");
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .details {
+          .pic {
+            background-image: url("../../../public/apartman/4/Balatonlelle_Nádor_4-es_Szoba1.jpg");
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        .details {
+          .pic1 {
+            background-image: url("../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Szoba_1_2.jpg");
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .details {
+          .pic1 {
+            background-image: url("../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Konyha_1.jpg");
+
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .details {
+          .pic1 {
+            background-image: url("../../../public/apartman/3/Balatonlelle_Nádor_3-as_Nappali.jpg");
+          }
+        }
+      }
+
+      .details {
+        @include centerDiv(row);
+
+        .pic,
+        .pic1 {
+          background-image: url("../../../public/lellehazdark.jpeg");
+          @include pic();
+          @include centerDiv(row);
+          align-items: flex-end;
+          width: 10rem;
+          height: 10rem;
+          transition: all 0.5s;
+          position: relative;
+
+          &::after {
+            content: "Képek";
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            color: white;
+            background-color: rgba($bg, 0.5);
+            text-align: center;
+            @include centerDiv(row);
+            font-size: 12px;
+            opacity: 0;
+            transition: all 0.5s;
+          }
+
+          p {
+            width: 100%;
+            text-align: center;
+            padding: 0.5rem;
+            background-color: $main;
+            color: white;
+            font-size: .8rem;
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+
+        .text {
+          @include centerDiv(column);
+          cursor: pointer;
+
+
+
+          h3 {
+            font-size: 30px;
+            text-align: center;
+          }
+
+
+
+          .sep {
+            width: 40%;
+            height: 1px;
+            position: relative;
+            background-color: $main;
+            margin: 1rem 0;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 1rem;
+              height: 1rem;
+              border-radius: 100%;
+              z-index: 10;
+              top: calc(50% - 0.55rem);
+              left: calc(50% - 0.55rem);
+              border: 1px solid $main;
+            }
+          }
+
+          .desc {
+            @include centerDiv(column);
+            width: 90%;
+
+            p {
+              text-align: center;
+              margin: 0;
+            }
+
+            .price {
+              @include centerDiv(row);
+              justify-content: space-between;
+              width: 80%;
+              margin-top: 1rem;
+            }
+          }
+
+          .services {
+            @include centerDiv(row);
+            width: 90%;
+            background-color: $main;
+            padding: 0.5rem;
+
+            .service {
+              @include centerDiv(row);
+              width: 25%;
+              margin: 0 0.5rem;
+
+              svg {
+                width: 1.5rem;
+                color: white;
+                font-weight: bold;
+              }
+
+              p {
+                margin-top: 0;
+                color: white;
+                font-weight: 400;
+                font-size: 1rem;
+                width: 100%;
+                text-align: left;
+                padding-left: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 715px) {
+    .container {
+      .apartman {
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 2rem;
+        position: relative;
+
+        .radioItem label::after,
+        .radioItem label::before {
+          left: 0;
+        }
+
+        .details {
+          margin-top: 5rem;
+          flex-direction: column;
+
+          .text {
+            .services {
+              margin: 3rem 0;
+            }
+          }
+        }
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 10;
+          width: 3rem;
+          height: 3rem;
+          background-color: $main;
+          top: 0;
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .container {
+      .apartman {
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 2rem;
+        position: relative;
+        width: 80%;
+
+        .radioItem label::after,
+        .radioItem label::before {
+          left: 0;
+        }
+
+        .details {
+          margin-top: 5rem;
+          flex-direction: column;
+
+          .text {
+            .services {
+              margin: 3rem 0;
+              flex-direction: column;
+              width: 100%;
+
+              .service {
+                margin: 1rem 0;
+                width: 100%;
+
+                svg {
+                  width: 2rem;
+                  color: white;
+                }
+
+                p {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .container {
+      .apartman {
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 2rem;
+        position: relative;
+        width: 80%;
+
+        .radioItem label::after,
+        .radioItem label::before {
+          left: 0;
+        }
+
+        .details {
+          margin-top: 5rem;
+          flex-direction: column;
+
+          .text {
+            .services {
+              margin: 3rem 0;
+              flex-direction: column;
+              width: 100%;
+
+              .service {
+                margin: 1rem 0;
+                width: 100%;
+
+                svg {
+                  width: 2rem;
+                  color: white;
+                }
+
+                p {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include ApartmanStyle();

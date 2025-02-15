@@ -1,0 +1,372 @@
+$main: #daa06d;
+$bg: #2f4858;
+$accent1: #ffeace;
+$red: #C35355;
+$green: #007F4D;
+
+@mixin centerDiv($dir) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: $dir;
+}
+
+@mixin pic() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin MyButton() {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding: 1rem 4rem;
+  color: $main;
+  transition: all 0.6s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 19px 3px rgba($main, 0.75);
+    transition: all 0.6s;
+  }
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+
+    &::after {
+      background-color: $main;
+      transform: skewX(-10deg);
+      box-shadow: none;
+    }
+  }
+}
+
+@mixin apartmanPic() {
+  width: 30rem;
+  height: 15rem;
+  position: relative;
+
+  .caption {
+    background-color: $main;
+    color: white;
+    position: absolute;
+    padding: 1rem 2rem;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border: 2px solid $main;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    bottom: 3rem;
+    right: 3rem;
+    border-bottom: none;
+    border-right: none;
+  }
+
+  &::after {
+    top: 3rem;
+    left: 3rem;
+    border-top: none;
+    border-left: none;
+  }
+}
+
+@mixin radioItemOnReservation() {
+  .radioItem [type="radio"] {
+    display: none;
+  }
+
+  .radioItem+.radioItem {
+    margin-top: 15px;
+  }
+
+  .radioItem label {
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    min-width: 50px;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.4s ease-in-out 0s;
+  }
+
+  .radioItem label::after,
+  .radioItem label::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    left: 19px;
+    top: calc(50% - 12px);
+    border: 3px solid $main;
+    transition: all 0.6s;
+  }
+
+  .radioItem label::before {
+    background: $main;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(5);
+  }
+
+  .radioItem [type="radio"]:checked~label {
+    border-color: $main;
+  }
+
+  .radioItem [type="radio"]:checked~label::before {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@mixin MyTitle($fontSize) {
+  font-size: $fontSize;
+  color: $bg;
+  position: relative;
+  margin-right: 5rem;
+  padding: .5rem 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    width: 55%;
+    right: 0;
+    top: 0;
+    background-color: $main;
+    height: 1px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    width: 55%;
+    left: 0;
+    bottom: 0;
+    background-color: $main;
+    height: 1px;
+  }
+}
+
+@mixin DataSection() {
+  @include centerDiv(row);
+  margin: 1rem 0;
+
+  svg {
+    width: 2rem;
+    margin-right: 1rem;
+    color: $main;
+  }
+
+  .input {
+    @include centerDiv(column);
+    width: 60%;
+
+    p {
+      width: 100%;
+      text-align: left;
+      color: rgba($main, 0.5);
+      font-size: small;
+      font-style: italic;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-bottom: 1.5px solid $main;
+      color: $main;
+    }
+  }
+}
+
+@mixin Loader($color) {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem 0;
+
+  .flex {
+    min-height: 60pt;
+  }
+
+  @keyframes loading {
+    0% {
+      width: 50pt;
+      height: 50pt;
+      margin-top: 0;
+    }
+
+    25% {
+      height: 4pt;
+      margin-top: 23pt;
+    }
+
+    50% {
+      width: 4pt;
+    }
+
+    75% {
+      width: 50pt;
+    }
+
+    100% {
+      width: 50pt;
+      height: 50pt;
+      margin-top: 0;
+    }
+  }
+
+  .loader {
+    width: 50pt;
+    height: 50pt;
+    border-radius: 100%;
+    border: $color 4pt solid;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    animation: loading 1s infinite;
+  }
+
+  .loadText {
+    padding-top: 15px;
+    text-align: center;
+    color: lighten($color, 75%);
+  }
+}
+
+@mixin ApartmanImage() {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  float: left;
+  @include pic();
+
+}
+
+
+@mixin StyledInput() {
+
+  .group {
+    position: relative;
+    width: 100%;
+  }
+
+  .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba($color: $main, $alpha: .7);
+    background: transparent;
+    color: $bg;
+  }
+
+  .input:focus {
+    outline: none;
+  }
+
+  .label {
+    color: rgba($color: $main, $alpha: .7);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  .input:focus~label,
+  .input:not(:placeholder-shown)~label {
+    top: -20px;
+    font-size: 14px;
+    color: $main;
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  .bar:before,
+  .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: $main;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  .bar:before {
+    left: 50%;
+  }
+
+  .bar:after {
+    right: 50%;
+  }
+
+  .input:focus~.bar:before,
+  .input:focus~.bar:after {
+    width: 50%;
+  }
+
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .input:focus~.highlight {
+    animation: inputHighlighter 0.3s ease;
+  }
+
+  @keyframes inputHighlighter {
+    from {
+      background: $main;
+    }
+
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import "../../../uniform/style.module";
+
+.container {
+    @include centerDiv(row);
+    height: 100vh;
+}

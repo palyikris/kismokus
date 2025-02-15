@@ -1,0 +1,189 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 10rem;
+  scroll-behavior: smooth;
+}
+.container .reviewWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #daa06d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  padding: 1rem 0;
+  height: 50vh;
+  top: calc(50% - 25vh);
+  left: 10%;
+  z-index: 1000;
+}
+.container .reviewWrapper .reviewData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.container .reviewWrapper .reviewData textarea {
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: none;
+  resize: none;
+  margin-bottom: 1rem;
+  color: #2f4858;
+}
+.container .reviewWrapper .reviewHandler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  padding-top: 2rem;
+}
+.container .reviewWrapper .reviewHandler button {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container .reviewWrapper .reviewHandler button svg {
+  width: 1.5rem;
+  color: white;
+  transition: inherit;
+}
+.container .reviewWrapper .reviewHandler button:hover {
+  background-color: white;
+}
+.container .reviewWrapper .reviewHandler button:hover svg {
+  color: #daa06d;
+  transform: rotateZ(360deg);
+}
+.container .tokenWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #daa06d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: auto;
+  max-height: 50vh;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  scrollbar-width: none;
+}
+.container .tokenWrapper::-webkit-scrollbar {
+  display: none;
+}
+.container .tokenWrapper .token {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+  color: white;
+}
+.container .tokenWrapper .token .tokenData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.container .tokenWrapper .token .tokenData p {
+  width: 100%;
+  text-align: center;
+}
+.container .tokenWrapper .token .tokenData .reviewBool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+}
+.container .tokenWrapper .token .tokenData .reviewBool svg {
+  width: 1.5rem;
+}
+.container .tokenWrapper .token .tokenData .reviewBool .seeReview {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container .tokenWrapper .token .tokenData .reviewBool .seeReview svg {
+  width: 1.5rem;
+  color: white;
+  transition: inherit;
+}
+.container .tokenWrapper .token .tokenData .reviewBool .seeReview:hover {
+  background-color: white;
+}
+.container .tokenWrapper .token .tokenData .reviewBool .seeReview:hover svg {
+  color: #daa06d;
+}
+.container .tokenWrapper .token .handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+}
+.container .tokenWrapper .token .handler button {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container .tokenWrapper .token .handler button svg {
+  width: 1.5rem;
+  color: white;
+  transition: inherit;
+}
+.container .tokenWrapper .token .handler button:hover {
+  background-color: white;
+}
+.container .tokenWrapper .token .handler button:hover svg {
+  color: #daa06d;
+}
+.container .tokenWrapper .token:last-child {
+  border-bottom: none;
+}/*# sourceMappingURL=page.module.css.map */

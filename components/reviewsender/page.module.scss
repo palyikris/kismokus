@@ -1,0 +1,35 @@
+@import "../../uniform/style.module";
+
+.form {
+  @include centerDiv(row);
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+  padding: 3rem 1rem;
+  background-color: $main;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  input,
+  select {
+    width: 30%;
+    padding: 1rem 0.5rem;
+    border: none;
+    color: $main;
+    border-radius: 5px;
+    margin: 0 1rem;
+  }
+
+  button {
+    @include MyButton();
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: calc(1rem - 1px) 3rem;
+    margin: 0 1rem;
+
+    &:hover {
+      background-color: $main;
+      color: white;
+    }
+  }
+}

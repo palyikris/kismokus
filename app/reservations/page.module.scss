@@ -1,0 +1,110 @@
+@import "../../uniform/style.module";
+
+.container {
+    @include centerDiv(column);
+
+    .logout {
+        @include centerDiv(row);
+        width: auto;
+        position: absolute;
+        top: 2vmin;
+        right: 5vmin;
+        cursor: pointer;
+        background-color: white;
+        color: $main;
+        border-radius: 5px;
+        padding: 1vmin 2vmin;
+        border: 1.5px solid $main;
+        transition: all 0.3s ease-in-out;
+
+        svg {
+            width: 5vmin;
+
+        }
+
+        &:hover {
+            background-color: $main;
+            color: white;
+        }
+    }
+
+    .title {
+        @include centerDiv(column);
+        padding-top: 10vmin;
+
+        h1 {
+            @include MyTitle(50px);
+            margin: 0;
+        }
+
+        p {
+            color: $bg;
+            margin-top: 5vmin;
+
+            button {
+                background-color: transparent;
+                border: none;
+                font-weight: normal;
+                color: $main;
+                padding: 0;
+                border-bottom: 1px solid $main;
+            }
+        }
+    }
+
+    .types {
+        @include centerDiv(row);
+        margin-top: 10vmin;
+
+        button,
+        .type {
+            @include centerDiv(column);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin: 0 5vmin;
+            border: 1.5px solid $main;
+            border-radius: 5px;
+            padding: 1vmin 3vmin;
+            background-color: transparent;
+            color: $main;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $main;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .type {
+            background-color: $main;
+            color: white;
+        }
+    }
+
+    .typeTitle {
+        @include MyTitle(30px);
+        margin: 0;
+        margin-top: 10vmin;
+    }
+
+    .sep {
+        width: 80%;
+        height: 1px;
+        background-color: $main;
+        margin: 15vmin 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            background-color: transparent;
+            border: .1rem solid $main;
+            border-radius: 100%;
+            left: calc(50% - .55rem);
+            top: calc(50% - .55rem);
+        }
+    }
+}

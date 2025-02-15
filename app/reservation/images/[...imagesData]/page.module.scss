@@ -1,0 +1,267 @@
+@import "../../../../uniform/style.module";
+
+.ap1 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/apartman/1/Balatonlelle_Nádor_1-es_Fürdőszoba.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/apartman/1/Balatonlelle_Nádor_1-es_Konyha.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/apartman/1/Balatonlelle_Nádor_1-es_Konyha2.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/apartman/1/Balatonlelle_Nádor_1-es_Szoba1.jpg");
+    }
+
+    &:nth-child(5) {
+        background-image: url("../../../../public/apartman/1/Balatonlelle_Nádor_1-es_Szoba2.jpg");
+    }
+
+    &:nth-child(6) {
+        background-image: url("../../../../public/apartman/1/Balatonlelle_Nádor_1-es_Szoba2_.jpg");
+    }
+
+    &:nth-child(7) {
+        background-image: url("../../../../public/apartman/1/Balatonlelle_Nádor_1-es_WC.jpg");
+    }
+}
+
+.ap2 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/apartman/2/Balatonlelle_Nádor_2-es_Fürdőszoba.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/apartman/2/Balatonlelle_Nádor_2-es_Fürdőszoba2.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/apartman/2/Balatonlelle_Nádor_2-es_Konyha.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/apartman/2/Balatonlelle_Nádor_2-es_Szoba.jpg");
+    }
+}
+
+.ap3 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/apartman/3/Balatonlelle_Nádor_3-as_Fürdőszoba.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/apartman/3/Balatonlelle_Nádor_3-as_Konyha.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/apartman/3/Balatonlelle_Nádor_3-as_Nappali.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/apartman/3/Balatonlelle_Nádor_3-as_Szoba1.jpg");
+    }
+
+    &:nth-child(5) {
+        background-image: url("../../../../public/apartman/3/Balatonlelle_Nádor_3-as_WC.jpg");
+    }
+}
+
+.ap4 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/apartman/4/Balatonlelle_Nádor_4-es_Fürdőszoba.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/apartman/4//Balatonlelle_Nádor_4-es_Konyha.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/apartman/4/Balatonlelle_Nádor_4-es_Konyha2.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/apartman/4/Balatonlelle_Nádor_4-es_Szoba1.jpg");
+    }
+
+    &:nth-child(5) {
+        background-image: url("../../../../public/apartman/4/Balatonlelle_Nádor_4-es_Szoba2.jpg");
+    }
+
+    &:nth-child(6) {
+        background-image: url("../../../../public/apartman/4/Balatonlelle_Nádor_4-es_WC.jpg");
+    }
+}
+
+.ap5 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/apartman/general/Balatonlelle_Nádor_Apartmanház.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/apartman/general/Balatonlelle_Nádor_Kert1.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/apartman/general/Balatonlelle_Nádor_Kert2.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/apartman/general/Balatonlelle_Nádor_Apartmanház.jpg");
+    }
+
+
+}
+
+.to1 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Fürdőszoba_1_1.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Fürdőszoba_1_2.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Konyha_1.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Konyha_1_2.jpg");
+    }
+
+    &:nth-child(5) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Nappali_1_1.jpg");
+    }
+
+    &:nth-child(6) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Nappali_1_2.jpg");
+    }
+
+    &:nth-child(7) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Szoba1_1.jpg");
+    }
+
+    &:nth-child(8) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Szoba1_3.jpg");
+    }
+
+    &:nth-child(9) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Szoba1_4.jpg");
+    }
+
+    &:nth-child(10) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Szoba_2_1.jpg");
+    }
+
+    &:nth-child(11) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Szoba_2_2.jpg");
+    }
+
+    &:nth-child(12) {
+        background-image: url("../../../../public/topart/1/Dream\ Tópart_1\ emelet_Jobb\ apartman_Terasz_1.jpg");
+    }
+}
+
+.to2 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Fürdőszoba_1_1.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Fürdőszoba_1_2.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Fürdőszoba_1_3.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Konyha_1_1.jpg");
+    }
+
+    &:nth-child(5) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Konyha_1_2.jpg");
+    }
+
+    &:nth-child(6) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Szoba_1_1.jpg");
+    }
+
+    &:nth-child(7) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Szoba_1_2.jpg");
+    }
+
+    &:nth-child(8) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Szoba_2_1.jpg");
+    }
+
+    &:nth-child(9) {
+        background-image: url("../../../../public/topart/2/Dream\ Tópart_1\ emelet_Bal\ apartman_Szoba_2_2.jpg");
+    }
+}
+
+.to3 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/topart/3/0b1243c3-4883-4b04-8be1-479d25eedeb7.jpg")
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/topart/3/0b8e1394-4783-432a-93fd-60ad11a7af0b.jpg")
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/topart/3/6dabf24c-6953-473d-9717-41d49910d975.jpg")
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/topart/3/99d77b48-259f-4f80-8473-575eb79ec8c1.jpg")
+    }
+
+    &:nth-child(5) {
+        background-image: url("../../../../public/topart/3/a85df734-305d-43c0-a449-5913fc5285a1.jpg")
+    }
+
+    &:nth-child(6) {
+        background-image: url("../../../../public/topart/3/ac6cc67c-737f-4e42-bc83-5eba8baad0a4.jpg")
+    }
+}
+
+.to4 {
+    @include ApartmanImage();
+
+    &:nth-child(1) {
+        background-image: url("../../../../public/topart/general/toparthaz1.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../../../public/topart/general/Dream\ Tópart_Kerti\ kapu.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../../../../public/topart/general/Dream\ Tópart_Kerti\ kapu_2.jpg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../../../../public/topart/general/toparthaz2.jpg");
+    }
+}

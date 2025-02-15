@@ -1,0 +1,126 @@
+.picContainer {
+  width: 30rem;
+  height: 15rem;
+  position: relative;
+}
+.picContainer .caption {
+  background-color: #daa06d;
+  color: white;
+  position: absolute;
+  padding: 1rem 2rem;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+.picContainer::after, .picContainer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1.5px solid #daa06d;
+  width: 100%;
+  height: 100%;
+}
+.picContainer::before {
+  bottom: 3rem;
+  right: 3rem;
+  border-bottom: none;
+  border-right: none;
+}
+.picContainer::after {
+  top: 3rem;
+  left: 3rem;
+  border-top: none;
+  border-left: none;
+}
+.picContainer .picWindow {
+  overflow: hidden;
+  width: 30rem;
+  height: 15rem;
+}
+.picContainer .picWindow .pics {
+  width: 30rem;
+  height: 30rem;
+  animation-name: picSlide;
+  animation-duration: 25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes picSlide {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -15rem;
+  }
+  30% {
+    margin-top: -15rem;
+  }
+  40% {
+    margin-top: -30rem;
+  }
+  50% {
+    margin-top: -30rem;
+  }
+  60% {
+    margin-top: -45rem;
+  }
+  70% {
+    margin-top: -45rem;
+  }
+  80% {
+    margin-bottom: -60rem;
+  }
+  90% {
+    margin-bottom: -60rem;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .picContainer {
+    width: 20rem;
+    height: 15rem;
+  }
+  .picContainer .picWindow {
+    width: 20rem;
+    height: 15rem;
+  }
+  .picContainer .picWindow .pics {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .picContainer {
+    width: 60%;
+    height: 15rem;
+  }
+  .picContainer .picWindow {
+    width: 60%;
+    height: 15rem;
+  }
+  .picContainer .picWindow .pics {
+    width: 60%;
+    height: 15rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .picContainer {
+    width: 60%;
+    height: 15rem;
+  }
+  .picContainer .picWindow {
+    width: 100%;
+    height: 15rem;
+  }
+  .picContainer .picWindow .pics {
+    width: 100%;
+    height: 15rem;
+  }
+}/*# sourceMappingURL=page.module.css.map */

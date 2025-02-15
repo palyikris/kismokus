@@ -1,0 +1,9 @@
+@import "../../uniform/style.module";
+
+.containermain {
+    @include Loader($main)
+}
+
+.containerwhite {
+    @include Loader(white);
+}

@@ -1,0 +1,388 @@
+@import "../../uniform/style.module";
+
+.container {
+  @include centerDiv(column);
+
+  .magImageContainer {
+    @include centerDiv(column);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100000;
+
+    .magImageButton {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      color: white;
+      background-color: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .magImage {
+      width: 90%;
+      height: 90%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+  }
+
+  .heroSections {
+    @include centerDiv(column);
+    align-items: flex-start;
+    height: 100vh;
+    // background-image: url("../../public/narancslemente.jpg");
+    // @include pic();
+    position: relative;
+    padding-bottom: 1rem;
+
+
+    .heroElements {
+      @include centerDiv(column);
+      width: 50%;
+      border: 2px solid $main;
+      padding: 2rem 1rem;
+      position: relative;
+      border-right: 0;
+      margin-left: 5rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 20%;
+        width: 2px;
+        background-color: $main;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 20%;
+        width: 2px;
+        background-color: $main;
+      }
+
+      h1,
+      p {
+        color: white;
+        width: 100%;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 1rem;
+
+        span {
+          color: $main;
+        }
+      }
+
+      a {
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .apartmansDetailed {
+    @include centerDiv(column);
+    padding: 5rem 0;
+
+    .apartmanDetailed {
+      @include centerDiv(column);
+      padding: 1rem;
+      color: $bg;
+
+      .intro {
+        @include centerDiv(row);
+        padding-left: 6rem;
+
+        .magImages {
+          background-color: none;
+          border: none;
+          @include centerDiv(row);
+          width: auto;
+          height: auto;
+          cursor: pointer;
+          position: relative;
+
+
+          &::after {
+            content: "Kattints a nagyításhoz!";
+            position: absolute;
+            z-index: 1000;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            @include centerDiv(row);
+            color: white;
+            transition: all 0.5s;
+            opacity: 0;
+          }
+
+          &:hover::after {
+            opacity: 1;
+          }
+        }
+
+        .description {
+          padding: 1rem 3rem;
+          margin-left: 5rem;
+          @include centerDiv(column);
+          width: 60%;
+
+          h1 {
+            width: 100%;
+            font-size: 50px;
+            text-align: center;
+            color: $main;
+          }
+
+          .sep {
+            margin: 3rem 0;
+          }
+
+          p {
+            text-align: center;
+            width: 80%;
+            padding-bottom: 3rem;
+            font-size: 1.2rem;
+          }
+
+          button {
+            @include MyButton();
+          }
+        }
+      }
+
+      .details {
+        @include centerDiv(row);
+        padding-top: 3rem;
+
+        .services {
+          @include centerDiv(column);
+
+          .service {
+            @include centerDiv(row);
+            padding: 1rem;
+            background-color: $main;
+            width: 60%;
+            justify-content: flex-start;
+
+            &:first-child {
+              padding-top: 2rem;
+            }
+
+            &:last-child {
+              padding-bottom: 2rem;
+            }
+
+            svg {
+              width: 1.5rem;
+              color: white;
+              margin-right: 0.5rem;
+            }
+
+            p {
+              color: white;
+            }
+          }
+        }
+
+        .interiors {
+          @include centerDiv(column);
+          padding: 1rem 3rem;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .sep {
+      width: 60%;
+      height: 0.1rem;
+      position: relative;
+      background-color: $main;
+      margin: 10rem 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        z-index: 10;
+        top: calc(50% - 0.55rem);
+        left: calc(50% - 0.55rem);
+        border: 0.1rem solid $main;
+      }
+    }
+  }
+}
+
+.pic,
+.pic1 {
+  background-image: url("../../public/lellehazdark.jpeg");
+  @include pic();
+  width: 30rem;
+  height: 15rem;
+  position: relative;
+  float: left;
+  transition: all 0.6s;
+
+  &:nth-child(1) {
+    background-image: url("../../public/apartman/general/Balatonlelle_Nádor_Apartmanház.jpg");
+  }
+
+  &:nth-child(2) {
+    background-image: url("../../public/apartman/general/Balatonlelle_Nádor_Kert1.jpg");
+  }
+
+  &:nth-child(3) {
+    background-image: url("../../public/apartman/general/Balatonlelle_Nádor_Kert2.jpg");
+  }
+
+  &:nth-child(4) {
+    background-image: url("../../public/apartman/general/Balatonlelle_Nádor_Apartmanház.jpg");
+  }
+}
+
+.pic1 {
+  &:nth-child(1) {
+    background-image: url("../../public/topart/general/toparthaz1.jpg");
+  }
+
+  &:nth-child(2) {
+    background-image: url("../../public/topart/general/Dream\ Tópart_Kerti\ kapu.jpg");
+  }
+
+  &:nth-child(3) {
+    background-image: url("../../public/topart/general/Dream\ Tópart_Kerti\ kapu_2.jpg");
+  }
+
+  &:nth-child(4) {
+    background-image: url("../../public/topart/general/toparthaz2.jpg");
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .heroSections {
+    @include centerDiv(row);
+    justify-content: flex-start;
+    padding: 0;
+
+    .apartmans {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .container .apartmansDetailed .apartmanDetailed .intro {
+    padding-left: 3rem;
+  }
+
+  .container .apartmansDetailed .apartmanDetailed .details {
+    padding-right: 3rem;
+
+    .services .service {
+      width: 75%;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .container .heroSections .heroElements h1 {
+    font-size: 35px;
+  }
+
+  .container {
+    .apartmansDetailed {
+      .apartmanDetailed {
+
+        .intro,
+        .details {
+          flex-direction: column;
+          padding: 0;
+
+          .services {
+            margin: 7rem 0;
+          }
+        }
+
+        .intro {
+          .description {
+            padding: 0;
+            margin: 0;
+            margin-top: 8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .container .heroSections .heroElements {
+    width: 70%;
+    margin-left: 2rem;
+  }
+
+  .container .apartmansDetailed .apartmanDetailed .details .interiors {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .heroSections {
+    padding-left: 1rem !important;
+
+    .heroElements {
+      width: 95% !important;
+      margin: 0 !important;
+    }
+  }
+
+  .magImages {
+    background-color: transparent;
+    width: 100% !important;
+  }
+
+  .description {
+    width: 100% !important;
+
+    h1 {
+      font-size: 45px !important;
+    }
+
+    p {
+      text-align: left !important;
+    }
+  }
+
+  .interiors {
+    div {
+      display: none;
+    }
+  }
+}

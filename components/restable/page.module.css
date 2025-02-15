@@ -1,0 +1,228 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  padding: 10vmin 0 0 0;
+}
+.container h1 {
+  font-size: 40px;
+  color: #2f4858;
+  position: relative;
+  margin-right: 5rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+.container h1::before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  width: 55%;
+  right: 0;
+  top: 0;
+  background-color: #daa06d;
+  height: 1px;
+}
+.container h1::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  width: 55%;
+  left: 0;
+  bottom: 0;
+  background-color: #daa06d;
+  height: 1px;
+}
+
+.reservationTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 10vmin;
+  border: 1.5px solid #daa06d;
+  border-radius: 5px;
+  width: 95%;
+  background-color: #daa06d;
+  overflow-y: scroll;
+  height: 500px;
+  justify-content: flex-start;
+  box-shadow: 0px 0px 10px 2px rgba(47, 72, 88, 0.75);
+}
+.reservationTable::-webkit-scrollbar {
+  display: none;
+}
+.reservationTable .reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 2vmin 0;
+  border-bottom: 1px solid white;
+}
+.reservationTable .reservation:last-child {
+  border-bottom: none;
+}
+.reservationTable .reservation .reservationData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+}
+.reservationTable .reservation .reservationData:hover .deleteWrapper {
+  opacity: 1;
+}
+.reservationTable .reservation .reservationData .deleteWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  height: 100%;
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+}
+.reservationTable .reservation .reservationData .deleteWrapper .delete,
+.reservationTable .reservation .reservationData .deleteWrapper .sendInv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: auto;
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  color: #daa06d;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 0 1rem;
+}
+.reservationTable .reservation .reservationData .deleteWrapper .delete:hover,
+.reservationTable .reservation .reservationData .deleteWrapper .sendInv:hover {
+  transform: scale(1.05);
+}
+.reservationTable .reservation .reservationData .deleteWrapper .delete svg,
+.reservationTable .reservation .reservationData .deleteWrapper .sendInv svg {
+  width: 2rem;
+}
+.reservationTable .reservation .reservationData .data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  margin: 0.5vmin 1vmin;
+  color: white;
+}
+.reservationTable .reservation .reservationData .data p {
+  text-align: center;
+}
+.reservationTable .reservation .reservationData .data:nth-child(2) {
+  width: 50%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(3) {
+  width: 120%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(4) {
+  width: 80%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(5) {
+  width: 40%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(6) {
+  width: 40%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(7) {
+  width: 50%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(8) {
+  width: 50%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(9) {
+  width: 40%;
+}
+.reservationTable .reservation .reservationData .data:nth-child(10) {
+  width: 80%;
+}
+.reservationTable .reservation .seen,
+.reservationTable .reservation .seenNot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  width: 5%;
+}
+.reservationTable .reservation .seen input,
+.reservationTable .reservation .seenNot input {
+  width: 5vmin;
+  background-color: white;
+  color: #daa06d;
+  padding: 0.5vmin;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+.reservationTable .reservation .seen button,
+.reservationTable .reservation .seenNot button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  background-color: transparent;
+  border: none;
+  padding: 1vmin;
+}
+.reservationTable .reservation .seen button svg,
+.reservationTable .reservation .seenNot button svg {
+  color: white;
+  transition: all 0.5s ease-in-out;
+  width: 5vmin;
+}
+.reservationTable .reservation .seen button svg:hover,
+.reservationTable .reservation .seenNot button svg:hover {
+  cursor: pointer;
+  color: #daa06d;
+  background-color: white;
+  border-radius: 2px;
+}
+.reservationTable .reservation .seen div,
+.reservationTable .reservation .seenNot div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  background-color: transparent;
+  border: none;
+  padding: 1vmin;
+}
+.reservationTable .reservation .seen div svg,
+.reservationTable .reservation .seenNot div svg {
+  color: white;
+  transition: all 0.5s ease-in-out;
+  width: 5vmin;
+}
+.reservationTable .reservation .seenNot {
+  opacity: 0;
+}
+.reservationTable .reservation:first-child {
+  border-bottom: 1.5px solid #2f4858;
+}
+.reservationTable .reservation:first-child .data {
+  color: #2f4858;
+}/*# sourceMappingURL=page.module.css.map */

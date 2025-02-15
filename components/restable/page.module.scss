@@ -1,0 +1,197 @@
+@import "../../uniform/style.module";
+
+.container {
+    @include centerDiv(row);
+    padding: 10vmin 0 0 0;
+
+    h1 {
+        @include MyTitle(40px);
+        margin: 0;
+    }
+}
+
+.reservationTable {
+    @include centerDiv(column);
+    margin-top: 10vmin;
+    border: 1.5px solid $main;
+    border-radius: 5px;
+    width: 95%;
+    background-color: $main;
+    overflow-y: scroll;
+    height: 500px;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 10px 2px rgba($bg, 0.75);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .reservation {
+        @include centerDiv(row);
+        justify-content: flex-start;
+        padding: 2vmin 0;
+        border-bottom: 1px solid white;
+
+
+
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .reservationData {
+            @include centerDiv(row);
+            justify-content: flex-start;
+            position: relative;
+
+            &:hover {
+                .deleteWrapper {
+                    opacity: 1;
+                }
+            }
+
+            .deleteWrapper {
+                @include centerDiv(row);
+                height: 100%;
+                position: absolute;
+                backdrop-filter: blur(5px);
+                opacity: 0;
+                transition: all .3s ease-in-out;
+                z-index: 100;
+
+
+                .delete,
+                .sendInv {
+                    @include centerDiv(row);
+                    width: auto;
+                    padding: .5rem 3rem;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: white;
+                    color: $main;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+                    margin: 0 1rem;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+
+                    svg {
+                        width: 2rem;
+                    }
+                }
+            }
+
+            .data {
+                @include centerDiv(row);
+                margin: .5vmin 1vmin;
+                color: white;
+
+                p {
+                    text-align: center;
+                }
+
+                &:nth-child(2) {
+                    width: 50%;
+                }
+
+                &:nth-child(3) {
+                    width: 120%;
+                }
+
+                &:nth-child(4) {
+                    width: 80%;
+                }
+
+                &:nth-child(5) {
+                    width: 40%;
+                }
+
+                &:nth-child(6) {
+                    width: 40%;
+                }
+
+                &:nth-child(7) {
+                    width: 50%;
+                }
+
+                &:nth-child(8) {
+                    width: 50%;
+                }
+
+                &:nth-child(9) {
+                    width: 40%;
+                }
+
+                &:nth-child(10) {
+                    width: 80%;
+                }
+            }
+        }
+
+        .seen,
+        .seenNot {
+            @include centerDiv(row);
+            width: 5%;
+
+            input {
+                width: 5vmin;
+                background-color: white;
+                color: $main;
+                padding: .5vmin;
+                border: none;
+                outline: none;
+                border-radius: 2px;
+            }
+
+            button {
+                @include centerDiv(row);
+                background-color: transparent;
+                border: none;
+                padding: 1vmin;
+
+                svg {
+                    color: white;
+                    transition: all .5s ease-in-out;
+                    width: 5vmin;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $main;
+                        background-color: white;
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            div {
+                @include centerDiv(row);
+                background-color: transparent;
+                border: none;
+                padding: 1vmin;
+
+                svg {
+                    color: white;
+                    transition: all .5s ease-in-out;
+                    width: 5vmin;
+
+
+                }
+            }
+        }
+
+        .seenNot {
+            opacity: 0;
+        }
+
+        &:first-child {
+            border-bottom: 1.5px solid $bg;
+
+            .data {
+                color: $bg;
+            }
+        }
+    }
+}

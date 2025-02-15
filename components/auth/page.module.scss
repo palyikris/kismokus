@@ -1,0 +1,86 @@
+@import "../../uniform/style.module";
+
+
+.form {
+    @include DataSection();
+
+    @include centerDiv(column);
+    box-shadow: 0 0 10px 3px rgba($main, 0.7);
+    width: 50%;
+    border-radius: 10px;
+    padding: 5vmin 0;
+
+    h1 {
+        @include MyTitle(60px);
+        margin: 0;
+        margin-bottom: 10vmin;
+    }
+
+    div {
+        margin: 3vmin 0;
+    }
+
+    .buttons {
+        @include centerDiv(row);
+        justify-content: space-around;
+
+        button {
+            margin-top: 3vmin;
+            @include MyButton();
+
+            svg {
+                margin: 0;
+                transition: all .5s ease-in-out;
+            }
+
+            &:hover {
+                svg {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .form {
+        h1 {
+            @include MyTitle(40px);
+            margin: 0;
+            margin-bottom: 5vmin;
+        }
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .form {
+        width: 80%;
+
+        h1 {
+            margin: 0;
+            margin-bottom: 5vmin;
+        }
+
+        .input {
+            width: 80%;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .form {
+        width: 90%;
+
+        h1 {
+            @include MyTitle(30px);
+            margin: 0;
+            margin-bottom: 5vmin;
+        }
+
+        .input {
+            width: 80%;
+        }
+
+    }
+}

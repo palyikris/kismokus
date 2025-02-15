@@ -1,0 +1,66 @@
+@import "../../uniform/style.module";
+
+.container {
+  @include centerDiv(column);
+  padding: 5rem;
+  color: $bg;
+
+  h1 {
+    font-size: 60px;
+    color: $bg;
+    position: relative;
+    padding: 0.5rem 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      width: 55%;
+      right: 0;
+      top: 0;
+      background-color: $main;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      width: 55%;
+      left: 0;
+      bottom: 0;
+      background-color: $main;
+      height: 1px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    padding: 5rem 2rem;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .container {
+    padding: 5rem 0;
+
+    h1 {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 5rem 0;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+}

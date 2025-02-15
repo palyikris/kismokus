@@ -1,0 +1,82 @@
+@import "../../uniform/style.module";
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include centerDiv(row);
+
+  .backButton {
+    @include centerDiv(row);
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    padding: 0 3rem 1rem 0;
+
+    button {
+      @include MyButton();
+    }
+  }
+
+  .numberDisplay {
+    @include centerDiv(row);
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    padding: 1rem 3rem 0 0;
+
+    p {
+      color: white;
+      margin-right: 1rem;
+    }
+  }
+
+  .handles {
+    @include centerDiv(row);
+    justify-content: space-between;
+    position: absolute;
+    z-index: 100;
+    height: 6rem;
+    left: 0;
+    top: calc(50% - 3rem);
+
+    button {
+      height: 100%;
+      @include centerDiv(row);
+      width: auto;
+      background-color: rgba(black, 0.2);
+      transition: all 0.5s;
+      border: none;
+
+      svg {
+        width: 3rem;
+        color: white;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(black, 0.6);
+      }
+    }
+  }
+
+  .window {
+    @include centerDiv(row);
+    height: 100vh;
+    overflow: hidden;
+    justify-content: flex-start;
+
+    .images {
+      @include centerDiv(row);
+      flex-shrink: 0;
+      flex-grow: 1;
+      justify-content: flex-start;
+      height: 100vh;
+      text-align: center;
+    }
+  }
+}

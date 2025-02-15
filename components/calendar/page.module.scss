@@ -1,0 +1,36 @@
+@import "../../uniform/style.module";
+
+.calendar {
+    border: 1px solid $main;
+    border-radius: 10px;
+    color: $main;
+
+    span {
+        color: $bg;
+        font-weight: bold;
+    }
+
+    button {
+        color: $bg;
+    }
+
+    button[aria-selected="true"],
+    button-selected,
+    button:focus,
+    button:active,
+    .Mui-selected .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+        background-color: $main;
+        color: white;
+    }
+
+    svg {
+        color: white;
+
+    }
+}
+
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root:focus.Mui-selected,
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
+.MuiButtonBase-root .MuiPickersDay-root .Mui-selected .MuiPickersDay-dayWithMargin .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root {
+    background-color: $main;
+}

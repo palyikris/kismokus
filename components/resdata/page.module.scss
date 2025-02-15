@@ -1,0 +1,93 @@
+@import "../../uniform/style.module";
+
+.container {
+    @include centerDiv(column);
+
+
+    .dataContainer {
+        @include centerDiv(row);
+        justify-content: flex-start;
+
+        .dataWrapper {
+            @include centerDiv(column);
+            background-color: $main;
+            width: auto;
+            max-width: 70%;
+            height: 100vh;
+            box-shadow: 0 0 10px 2px rgba($main, .5);
+            padding-top: 3rem;
+
+
+            .data {
+                @include centerDiv(row);
+                margin: .5rem 0;
+                align-items: flex-end;
+                padding: 1vmin;
+
+
+                svg {
+                    width: 2rem;
+                    color: white;
+                    margin-right: 1rem;
+                }
+
+                div {
+                    @include centerDiv(column);
+
+                    label {
+                        color: white;
+                        font-size: 12px;
+                        width: 100%;
+                        text-align: left;
+                    }
+
+                    p {
+                        padding: .5rem;
+                        padding-bottom: 0;
+                        border-bottom: 1.5px solid white;
+                        color: white;
+                        width: 100%;
+                        text-align: left;
+                    }
+
+                }
+
+
+
+                &:last-child {
+                    @include centerDiv(column);
+                    height: 100%;
+                    justify-content: flex-end;
+                    padding-bottom: 5rem;
+
+                    button {
+                        padding: 1rem 2rem;
+                        background-color: white;
+                        color: $main;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: all .3s;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+
+        .calendarWrapper {
+            @include centerDiv(row);
+
+            .calendar {
+                margin: 1vmin;
+            }
+        }
+    }
+
+    h1 {
+        @include MyTitle(30px);
+        margin: 0;
+    }
+}

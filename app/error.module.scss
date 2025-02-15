@@ -1,0 +1,27 @@
+@import "../uniform/style.module";
+
+
+.container {
+    @include centerDiv(row);
+    height: 100vh;
+
+    .error {
+        @include centerDiv(column);
+        width: 50%;
+        height: 50%;
+        box-shadow: 0 0 10px 3px rgba($main, 0.75);
+        border-radius: 5px;
+        justify-content: space-around;
+
+        h2 {
+            @include MyTitle(40px);
+            margin: 0;
+        }
+
+
+        button {
+            @include MyButton();
+            margin-top: 5vmin;
+        }
+    }
+}

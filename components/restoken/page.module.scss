@@ -1,0 +1,170 @@
+@import "../../uniform/style.module";
+
+
+.container {
+  @include centerDiv(column);
+  padding-bottom: 10rem;
+  scroll-behavior: smooth;
+
+  .reviewWrapper {
+    @include centerDiv(column);
+    width: 80%;
+    border-radius: 10px;
+    background-color: $main;
+    box-shadow: 0 0 10px rgba(black, 0.5);
+    position: fixed;
+    padding: 1rem 0;
+    height: 50vh;
+    top: calc(50% - 25vh);
+    left: calc(50% - 40%);
+    z-index: 1000;
+
+    .reviewData {
+      @include centerDiv(column);
+
+      textarea {
+        border-radius: 10px;
+        padding: .5rem;
+        border: none;
+        resize: none;
+        margin-bottom: 1rem;
+        color: $bg;
+      }
+    }
+
+    .reviewHandler {
+      @include centerDiv(row);
+      padding-top: 2rem;
+
+      button {
+        padding: .5rem;
+        border-radius: 10px;
+        border: 1px solid white;
+        background-color: transparent;
+        @include centerDiv(row);
+        width: auto;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        svg {
+          width: 1.5rem;
+          color: white;
+          transition: inherit;
+        }
+
+        &:hover {
+          background-color: white;
+
+          svg {
+            color: $main;
+            transform: rotateZ(360deg);
+          }
+        }
+      }
+    }
+  }
+
+  .tokenWrapper {
+    @include centerDiv(column);
+    width: 80%;
+    border-radius: 10px;
+    background-color: $main;
+    box-shadow: 0 0 10px rgba(black, 0.5);
+    height: auto;
+    max-height: 50vh;
+    overflow-y: scroll;
+    justify-content: flex-start;
+
+    &::-webkit-scrollbar {
+      display: none
+    }
+
+    scrollbar-width: none;
+
+    .token {
+      @include centerDiv(row);
+      width: 100%;
+      padding: 1rem;
+      border-bottom: 1px solid white;
+      color: white;
+
+      .tokenData {
+        @include centerDiv(row);
+        justify-content: space-evenly;
+
+        p {
+          width: 100%;
+          text-align: center;
+        }
+
+        .reviewBool {
+          @include centerDiv(row);
+
+          svg {
+            width: 1.5rem;
+          }
+
+          .seeReview {
+            padding: .5rem;
+            border-radius: 10px;
+            border: none;
+            background-color: transparent;
+            @include centerDiv(row);
+            width: auto;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+
+            svg {
+              width: 1.5rem;
+              color: white;
+              transition: inherit
+            }
+
+            &:hover {
+              background-color: white;
+
+              svg {
+                color: $main;
+              }
+            }
+          }
+        }
+      }
+
+      .handler {
+        @include centerDiv(row);
+        justify-content: center;
+        width: auto;
+
+        button {
+          padding: .5rem;
+          border-radius: 10px;
+          border: none;
+          background-color: transparent;
+          @include centerDiv(row);
+          width: auto;
+          transition: all .3s ease-in-out;
+          cursor: pointer;
+
+          svg {
+            width: 1.5rem;
+            color: white;
+            transition: inherit;
+          }
+
+          &:hover {
+            background-color: white;
+
+            svg {
+              color: $main;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
