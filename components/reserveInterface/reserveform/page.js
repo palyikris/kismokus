@@ -113,13 +113,11 @@ export default function ReserveForm(props) {
         setReservationId(result);
         setIsAfterReservation(true);
 
-        handleSubmit(email, result, dataArrDate, dataDepDate).then(() => {
-          handleKeroSubmit(name, type, apartmanNumber, dataArrDate, dataDepDate).then(
-            () => {
-              setLoading(false);
-            }
-          );
-        });
+        handleSubmit(email, result, dataArrDate, dataDepDate).then(
+          () => {
+            setLoading(false);
+          }
+        );
       }
     });
   }

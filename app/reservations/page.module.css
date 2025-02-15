@@ -17,17 +17,17 @@
   right: 5vmin;
   cursor: pointer;
   background-color: white;
-  color: #daa06d;
+  color: #9dc183;
   border-radius: 5px;
   padding: 1vmin 2vmin;
-  border: 1.5px solid #daa06d;
+  border: 1.5px solid #9dc183;
   transition: all 0.3s ease-in-out;
 }
 .container .logout svg {
   width: 5vmin;
 }
 .container .logout:hover {
-  background-color: #daa06d;
+  background-color: #9dc183;
   color: white;
 }
 .container .title {
@@ -53,7 +53,7 @@
   width: 55%;
   right: 0;
   top: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }
 .container .title h1::after {
@@ -63,7 +63,7 @@
   width: 55%;
   left: 0;
   bottom: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }
 .container .title p {
@@ -74,9 +74,9 @@
   background-color: transparent;
   border: none;
   font-weight: normal;
-  color: #daa06d;
+  color: #9dc183;
   padding: 0;
-  border-bottom: 1px solid #daa06d;
+  border-bottom: 1px solid #9dc183;
 }
 .container .types {
   display: flex;
@@ -96,21 +96,21 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin: 0 5vmin;
-  border: 1.5px solid #daa06d;
+  border: 1.5px solid #9dc183;
   border-radius: 5px;
   padding: 1vmin 3vmin;
   background-color: transparent;
-  color: #daa06d;
+  color: #9dc183;
   text-transform: uppercase;
 }
 .container .types button:hover,
 .container .types .type:hover {
-  background-color: #daa06d;
+  background-color: #9dc183;
   color: white;
   cursor: pointer;
 }
 .container .types .type {
-  background-color: #daa06d;
+  background-color: #9dc183;
   color: white;
 }
 .container .typeTitle {
@@ -129,7 +129,7 @@
   width: 55%;
   right: 0;
   top: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }
 .container .typeTitle::after {
@@ -139,13 +139,13 @@
   width: 55%;
   left: 0;
   bottom: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }
 .container .sep {
   width: 80%;
   height: 1px;
-  background-color: #daa06d;
+  background-color: #9dc183;
   margin: 15vmin 0;
   position: relative;
 }
@@ -155,7 +155,7 @@
   width: 1rem;
   height: 1rem;
   background-color: transparent;
-  border: 0.1rem solid #daa06d;
+  border: 0.1rem solid #9dc183;
   border-radius: 100%;
   left: calc(50% - 0.55rem);
   top: calc(50% - 0.55rem);

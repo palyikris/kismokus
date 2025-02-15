@@ -1,7 +1,7 @@
 .calendar {
-  border: 1px solid #daa06d;
+  border: 1px solid #9dc183;
   border-radius: 10px;
-  color: #daa06d;
+  color: #9dc183;
 }
 .calendar span {
   color: #2f4858;
@@ -15,7 +15,7 @@
 .calendar button:focus,
 .calendar button:active,
 .calendar .Mui-selected .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
-  background-color: #daa06d;
+  background-color: #9dc183;
   color: white;
 }
 .calendar svg {
@@ -25,5 +25,5 @@
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root:focus.Mui-selected,
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
 .MuiButtonBase-root .MuiPickersDay-root .Mui-selected .MuiPickersDay-dayWithMargin .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root {
-  background-color: #daa06d;
+  background-color: #9dc183;
 }/*# sourceMappingURL=page.module.css.map */

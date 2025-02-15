@@ -6,7 +6,7 @@
   width: 100%;
   flex-direction: column;
   width: 90%;
-  border: 1px solid #daa06d;
+  border: 1px solid #9dc183;
   margin-top: 5rem;
   /* From Uiverse.io by Gaurav-WebDev */
 }
@@ -20,7 +20,7 @@
 }
 .reserveForm .details p {
   width: 50%;
-  color: #C35355;
+  color: #eb7d56;
   text-align: center;
   margin: 3rem 0;
 }
@@ -32,7 +32,7 @@
   flex-direction: row;
   width: auto;
   justify-content: flex-end;
-  border: 1px solid #daa06d;
+  border: 1px solid #9dc183;
 }
 .reserveForm .details div label {
   width: 100%;
@@ -47,17 +47,17 @@
   flex-direction: row;
   padding: 0.5rem;
   border: none;
-  border-left: 1px solid #daa06d;
+  border-left: 1px solid #9dc183;
   background-color: transparent;
   transition: all 0.5s;
 }
 .reserveForm .details div .copyButton:hover {
   cursor: pointer;
-  background-color: rgba(218, 160, 109, 0.1);
+  background-color: rgba(157, 193, 131, 0.1);
 }
 .reserveForm .details div .copyButton svg {
   width: 1.5rem;
-  color: #daa06d;
+  color: #9dc183;
 }
 .reserveForm h3 {
   font-size: 35px;
@@ -68,7 +68,7 @@
   width: 50%;
   height: 1px;
   position: relative;
-  background-color: #daa06d;
+  background-color: #9dc183;
   margin: 3rem 0;
 }
 .reserveForm .sep::after {
@@ -80,7 +80,7 @@
   z-index: 10;
   top: calc(50% - 0.55rem);
   left: calc(50% - 0.55rem);
-  border: 1px solid #daa06d;
+  border: 1px solid #9dc183;
 }
 .reserveForm .data {
   display: flex;
@@ -93,7 +93,7 @@
 .reserveForm .data svg {
   width: 2rem;
   margin-right: 1rem;
-  color: #daa06d;
+  color: #9dc183;
 }
 .reserveForm .data .input {
   display: flex;
@@ -106,7 +106,7 @@
 .reserveForm .data .input p {
   width: 100%;
   text-align: left;
-  color: rgba(218, 160, 109, 0.5);
+  color: rgba(157, 193, 131, 0.5);
   font-size: small;
   font-style: italic;
 }
@@ -120,7 +120,7 @@
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgba(218, 160, 109, 0.7);
+  border-bottom: 1px solid rgba(157, 193, 131, 0.7);
   background: transparent;
   color: #2f4858;
 }
@@ -128,7 +128,7 @@
   outline: none;
 }
 .reserveForm .data .input .label {
-  color: rgba(218, 160, 109, 0.7);
+  color: rgba(157, 193, 131, 0.7);
   font-size: 18px;
   font-weight: normal;
   position: absolute;
@@ -142,13 +142,13 @@
 .reserveForm .data .input .input:not(:-moz-placeholder-shown) ~ label {
   top: -20px;
   font-size: 14px;
-  color: #daa06d;
+  color: #9dc183;
 }
 .reserveForm .data .input .input:focus ~ label,
 .reserveForm .data .input .input:not(:placeholder-shown) ~ label {
   top: -20px;
   font-size: 14px;
-  color: #daa06d;
+  color: #9dc183;
 }
 .reserveForm .data .input .bar {
   position: relative;
@@ -162,7 +162,7 @@
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #daa06d;
+  background: #9dc183;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -191,7 +191,7 @@
 }
 @keyframes inputHighlighter {
   from {
-    background: #daa06d;
+    background: #9dc183;
   }
   to {
     width: 0;
@@ -221,7 +221,7 @@
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   margin: 3rem 0;
-  border: 1.5px solid #daa06d;
+  border: 1.5px solid #9dc183;
 }
 .reserveForm .button,
 .reserveForm .type1 {
@@ -244,7 +244,7 @@
 .reserveForm .type1 .after {
   height: 50px;
   width: 200px;
-  background-color: #daa06d;
+  background-color: #9dc183;
   color: #fff;
   position: absolute;
   top: 0%;
@@ -261,7 +261,7 @@
   content: "Foglalás";
   height: 50px;
   width: 200px;
-  color: #daa06d;
+  color: #9dc183;
   position: absolute;
   top: 0%;
   left: 0%;

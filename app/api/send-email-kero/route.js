@@ -10,13 +10,12 @@ export async function POST(req) {
     endDate
   } = await req.json();
   const message = `
-  Szia Ancsa/Keró!
+  Szia Gyöngyi!
   
   Foglalás történt a következő adatokkal:
   Érkezés: ${startDate}
   Távozás: ${endDate}
   Név: ${name}
-  Apartman száma: ${apartmanNumber}
   `;
 
   // Create a transporter object using SMTP transport
@@ -30,21 +29,8 @@ export async function POST(req) {
 
   let mailOptions = {};
   // Email options;
-  if (apartmanType === "dreamapartman") {
-    mailOptions = {
-      from: process.env.EMAIL_USERNAME,
-      to: "dreamapartman.hu@gmail.com",
-      subject: "Új Foglalás",
-      text: message
-    };
-  } else {
-    mailOptions = {
-      from: process.env.EMAIL_USERNAME,
-      to: "dreamtopart@gmail.com",
-      subject: "Új Foglalás",
-      text: message
-    };
-  }
+  mailOptions = { from: process.env.EMAIL_USERNAME, to: "kismokusvendeghaz@gmail.com", subject: "Új Foglalás", text: message };
+    
 
   try {
     // Send email

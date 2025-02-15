@@ -80,24 +80,17 @@ export default function Topnav() {
     <div className={styles.container}>
       {links.map((link, index) => {
         if (links[index].href === path) {
-          return (
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              className={styles.nav}
-              key={index}
-              onClick={() => {
+          return <motion.button whileHover={{ scale: 1.1 }} className={styles.nav} key={index} onClick={() => {
                 setIsDreamApartmanOpen(false);
                 setIsDreamHouseOpen(false);
                 setIsDreamTopartOpen(false);
                 router.push(link.href);
-              }}
-            >
+              }}>
               {link.svg}
-              <p style={{ color: "#daa06d" }}>
+              <p style={{ color: "#9dc183" }}>
                 {link.text}
               </p>
-            </motion.button>
-          );
+            </motion.button>;
         }
         return (
           <motion.button

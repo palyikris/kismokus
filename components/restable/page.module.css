@@ -21,7 +21,7 @@
   width: 55%;
   right: 0;
   top: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }
 .container h1::after {
@@ -31,7 +31,7 @@
   width: 55%;
   left: 0;
   bottom: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }
 
@@ -42,10 +42,10 @@
   width: 100%;
   flex-direction: column;
   margin-top: 10vmin;
-  border: 1.5px solid #daa06d;
+  border: 1.5px solid #9dc183;
   border-radius: 5px;
   width: 95%;
-  background-color: #daa06d;
+  background-color: #9dc183;
   overflow-y: scroll;
   height: 500px;
   justify-content: flex-start;
@@ -105,7 +105,7 @@
   border-radius: 10px;
   border: none;
   background-color: white;
-  color: #daa06d;
+  color: #9dc183;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin: 0 1rem;
@@ -170,7 +170,7 @@
 .reservationTable .reservation .seenNot input {
   width: 5vmin;
   background-color: white;
-  color: #daa06d;
+  color: #9dc183;
   padding: 0.5vmin;
   border: none;
   outline: none;
@@ -196,7 +196,7 @@
 .reservationTable .reservation .seen button svg:hover,
 .reservationTable .reservation .seenNot button svg:hover {
   cursor: pointer;
-  color: #daa06d;
+  color: #9dc183;
   background-color: white;
   border-radius: 2px;
 }

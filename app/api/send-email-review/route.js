@@ -4,17 +4,17 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
 
   const {email, type, token} = await req.json();
-  const apartmanType = type === "apartman" ? "Dream Apartman" : "Dream Tópart Apartman";
+  const apartmanType = type === "Kismókus Vendégház";
 
   const message = `
   Kedves Vendégünk!<br><br>
   
-  Reméljük, kellemesen telt az időtöltés a ${apartmanType}ban.<br>Kérjük, hogy értékeld/értékelje szállásunkat az alábbi linken:<br>
+  Reméljük, kellemesen telt az időtöltés a ${apartmanType}-ban.<br>Kérjük, hogy értékeld/értékelje szállásunkat az alábbi linken:<br>
   <a href="https://www.dreamkomplexum.com/reviews/${type}/${token}">Kattintson az értékeléshez!</a>
   <br>Várjuk visszajelzésedet/visszajelzését! Köszönjük szépen!<br><br>
 
   Üdvözlettel,<br>
-  Kerekesné Tollár Anikó
+  Verebi Gyöngyi<br>
   `;
 
   // Create a transporter object using SMTP transport

@@ -19,11 +19,11 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
-  background-color: #daa06d;
+  background-color: #9dc183;
   width: auto;
   max-width: 70%;
   height: 100vh;
-  box-shadow: 0 0 10px 2px rgba(218, 160, 109, 0.5);
+  box-shadow: 0 0 10px 2px rgba(157, 193, 131, 0.5);
   padding-top: 3rem;
 }
 .container .dataContainer .dataWrapper .data {
@@ -75,7 +75,7 @@
 .container .dataContainer .dataWrapper .data:last-child button {
   padding: 1rem 2rem;
   background-color: white;
-  color: #daa06d;
+  color: #9dc183;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -109,7 +109,7 @@
   width: 55%;
   right: 0;
   top: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }
 .container h1::after {
@@ -119,6 +119,6 @@
   width: 55%;
   left: 0;
   bottom: 0;
-  background-color: #daa06d;
+  background-color: #9dc183;
   height: 1px;
 }/*# sourceMappingURL=page.module.css.map */

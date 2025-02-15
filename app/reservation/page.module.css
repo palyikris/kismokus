@@ -23,7 +23,7 @@
   width: 100%;
   flex-direction: column;
   width: 50%;
-  border: 2px solid #daa06d;
+  border: 2px solid #9dc183;
   padding: 2rem 1rem;
   position: relative;
   border-right: 0;
@@ -37,7 +37,7 @@
   top: 0;
   height: 20%;
   width: 2px;
-  background-color: #daa06d;
+  background-color: #9dc183;
 }
 .container .heroSections .heroElements::before {
   content: "";
@@ -46,7 +46,7 @@
   bottom: 0;
   height: 20%;
   width: 2px;
-  background-color: #daa06d;
+  background-color: #9dc183;
 }
 .container .heroSections .heroElements h1,
 .container .heroSections .heroElements p {
@@ -59,7 +59,7 @@
   margin-bottom: 1rem;
 }
 .container .heroSections .heroElements h1 span {
-  color: #daa06d;
+  color: #9dc183;
 }
 .container .heroSections .heroElements p {
   width: 100%;
@@ -82,7 +82,7 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
-  background-color: #daa06d;
+  background-color: #9dc183;
   color: white;
   width: 60%;
   padding: 1.5rem 1rem;
@@ -109,8 +109,8 @@
 .container .heroSections .apartmans .apartman:hover::after {
   top: 0rem;
   left: 0rem;
-  border-bottom: 2px solid #daa06d;
-  border-right: 2px solid #daa06d;
+  border-bottom: 2px solid #9dc183;
+  border-right: 2px solid #9dc183;
 }
 .container .heroSections .apartmans .apartman h1 {
   font-size: 2rem;

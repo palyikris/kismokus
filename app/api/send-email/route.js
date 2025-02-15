@@ -6,7 +6,7 @@ export async function POST(req) {
   const message = `
   Kedves Vendégünk!
   
-  Köszönjük, hogy a DreamKomplexumokat választotta. Foglalását sikeresen rögzítettük.
+  Köszönjük, hogy a Kismókus Vendégházat választotta. Foglalását sikeresen rögzítettük.
   Visszaigazolásig várjon kérjük türelemmel, amíg fel nem vesszük Önnel a kapcsolatot.
   A következő időpontra foglalt:
   Érkezés: ${startDate}
@@ -17,8 +17,8 @@ export async function POST(req) {
   Kellemes és pihentető nyaralást kívánunk!
 
   Üdvözlettel,
-  Kerekesné Tollár Anikó
-  +36 70 373 3772
+  Verebi Gyöngyi
+  +36 20 283 7500
   
   `;
 

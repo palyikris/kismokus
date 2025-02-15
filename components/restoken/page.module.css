@@ -15,7 +15,7 @@
   flex-direction: column;
   width: 80%;
   border-radius: 10px;
-  background-color: #daa06d;
+  background-color: #9dc183;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: fixed;
   padding: 1rem 0;
@@ -70,7 +70,7 @@
   background-color: white;
 }
 .container .reviewWrapper .reviewHandler button:hover svg {
-  color: #daa06d;
+  color: #9dc183;
   transform: rotateZ(360deg);
 }
 .container .tokenWrapper {
@@ -81,7 +81,7 @@
   flex-direction: column;
   width: 80%;
   border-radius: 10px;
-  background-color: #daa06d;
+  background-color: #9dc183;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   height: auto;
   max-height: 50vh;
@@ -148,7 +148,7 @@
   background-color: white;
 }
 .container .tokenWrapper .token .tokenData .reviewBool .seeReview:hover svg {
-  color: #daa06d;
+  color: #9dc183;
 }
 .container .tokenWrapper .token .handler {
   display: flex;
@@ -182,7 +182,7 @@
   background-color: white;
 }
 .container .tokenWrapper .token .handler button:hover svg {
-  color: #daa06d;
+  color: #9dc183;
 }
 .container .tokenWrapper .token:last-child {
   border-bottom: none;

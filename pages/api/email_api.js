@@ -4,12 +4,9 @@ export default async function handler(req, res) {
     const { method, body } = req;
     switch (method) {
       case "POST": {
-        sendMail(
-          "Foglalás",
-          body.email,
-          `Helóka belóka!<br>
+        sendMail("Foglalás", body.email, `Helóka belóka!<br>
 
-Új foglalás történt a DreamComplex-ben. Csekkold le a felületen!<br>
+Új foglalás történt a Kismókus Vendégház-ban. Csekkold le a felületen!<br>
 A foglaló adatai:
 
 Email: ${body.email}<br>
@@ -23,8 +20,7 @@ Ház: ${body.type}<br>
 Apartman: ${body.number}<br>
 Megjegyzés: ${body.note}<br>
 Ne felejtsd el kipipálni a foglalást a felületen!
-`
-        );
+`);
         res.status(200).send("Success");
         break;
       }

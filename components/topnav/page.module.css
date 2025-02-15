@@ -29,7 +29,7 @@
   height: 2px;
   position: absolute;
   bottom: -0.5rem;
-  background-color: #daa06d;
+  background-color: #9dc183;
   transition: all 0.6s;
   left: 0;
 }
@@ -40,12 +40,12 @@
   width: 100%;
 }
 .container .nav:hover p {
-  color: #daa06d;
+  color: #9dc183;
 }
 .container .nav svg {
   width: 1.5rem;
   margin-right: 1rem;
-  color: #daa06d;
+  color: #9dc183;
 }
 .container .nav p {
   color: white;

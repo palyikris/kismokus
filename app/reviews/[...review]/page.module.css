@@ -15,7 +15,7 @@
   height: 100%;
   right: 0;
   top: 0;
-  background-color: rgba(218, 160, 109, 0.2);
+  background-color: rgba(157, 193, 131, 0.2);
   -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
           clip-path: polygon(100% 0, 0 0, 0 100%);
 }
@@ -36,7 +36,7 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  color: #daa06d;
+  color: #9dc183;
   font-size: 1.5rem;
 }
 .container .backHome button {
@@ -44,7 +44,7 @@
   border: none;
   position: relative;
   padding: 1rem 4rem;
-  color: #daa06d;
+  color: #9dc183;
   transition: all 0.6s;
 }
 .container .backHome button::after {
@@ -55,7 +55,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 19px 3px rgba(218, 160, 109, 0.75);
+  box-shadow: 0px 0px 19px 3px rgba(157, 193, 131, 0.75);
   transition: all 0.6s;
 }
 .container .backHome button:hover {
@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 .container .backHome button:hover::after {
-  background-color: #daa06d;
+  background-color: #9dc183;
   transform: skewX(-10deg);
   box-shadow: none;
 }
@@ -90,7 +90,7 @@
   width: 60%;
   height: 0.1rem;
   position: relative;
-  background-color: #daa06d;
+  background-color: #9dc183;
   margin: 2rem 0;
 }
 .container .starsWrapper .sep::after {
@@ -102,7 +102,7 @@
   z-index: 10;
   top: calc(50% - 0.55rem);
   left: calc(50% - 0.55rem);
-  border: 0.1rem solid #daa06d;
+  border: 0.1rem solid #9dc183;
 }
 .container .starsWrapper .stars {
   display: flex;
@@ -154,7 +154,7 @@
   border: none;
   position: relative;
   padding: 1rem 4rem;
-  color: #daa06d;
+  color: #9dc183;
   transition: all 0.6s;
   margin: 0 1rem;
 }
@@ -166,7 +166,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 19px 3px rgba(218, 160, 109, 0.75);
+  box-shadow: 0px 0px 19px 3px rgba(157, 193, 131, 0.75);
   transition: all 0.6s;
 }
 .container .starsWrapper .stars .buttons button:hover {
@@ -174,7 +174,7 @@
   cursor: pointer;
 }
 .container .starsWrapper .stars .buttons button:hover::after {
-  background-color: #daa06d;
+  background-color: #9dc183;
   transform: skewX(-10deg);
   box-shadow: none;
 }
