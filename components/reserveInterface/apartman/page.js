@@ -42,7 +42,7 @@ export default function ReserveApartmanComponent(props) {
               setApartmanNumber(1);
               router.push("/reservation#reserveFocus");
             }}>
-            <h3>1-es Apartman</h3>
+            <h3>Fő Apartman</h3>
             <div className={styles.sep} />
             <div className={styles.desc}>
               {isHuf ? <p>
@@ -96,7 +96,7 @@ export default function ReserveApartmanComponent(props) {
           </div>
         </div>
       </div>
-      <div className={styles.apartman}>
+      {/* <div className={styles.apartman}>
         <div className={styles.currencyWrapper}>
           <button onClick={() => {
               setIsHuf(true);
@@ -338,7 +338,7 @@ export default function ReserveApartmanComponent(props) {
             <p className={styles.caption}>Duplaklikk a képekért</p>
           </div>
         </div>
-      </div>
+      </div> */}
       <ReserveForm apartmanNumber={apartmanNumber} type={type} />
     </div>;
 }

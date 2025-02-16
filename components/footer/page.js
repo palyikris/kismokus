@@ -3,18 +3,11 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Footer() {
-  return (
-    <div className={styles.footer}>
+  return <div className={styles.footer}>
       <div className={styles.logoContainer}>
-        <Image
-          src={"/icon.jpg"}
-          alt="Dream Komplexum icon"
-          width={200}
-          height={150}
-          className={styles.logo}
-        />
+        <Image src={"/icon.jpg"} alt="Dream Komplexum icon" width={200} height={150} className={styles.logo} />
         <div className={styles.logoDescription}>
-          <h1>Dream Komplexumok</h1>
+          <h1>Kismókus Vendégház</h1>
           <p>Nagyon örülünk, hogy minket választ a nyaralásához!</p>
         </div>
       </div>
@@ -23,7 +16,9 @@ export default function Footer() {
           <a href="/hazirend.docx" download={true}>
             Házirend
           </a>
-          <a href="https://www.balatonlelle.hu/hu/varosunk/látnivalók" target="_blank">Látniválók</a>
+          <a href="https://ilovedunakanyar.hu/dunakanyar/nagymaros/" target="_blank">
+            Látniválók
+          </a>
         </div>
         <div className={styles.social}>
           <p>Kérjük érdeklődjön telefonon, vagy email-ben:</p>
@@ -33,6 +28,5 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }

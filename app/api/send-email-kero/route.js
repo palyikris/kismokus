@@ -3,9 +3,8 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   const {
+    email,
     name,
-    apartmanType,
-    apartmanNumber,
     startDate,
     endDate
   } = await req.json();
@@ -16,6 +15,7 @@ export async function POST(req) {
   Érkezés: ${startDate}
   Távozás: ${endDate}
   Név: ${name}
+  Email: ${email}
   `;
 
   // Create a transporter object using SMTP transport

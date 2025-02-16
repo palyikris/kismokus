@@ -25,8 +25,8 @@ export default function ArrivalCalendar(props) {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#daa06d",
-        dark: "#daa06d"
+        main: "#9dc183",
+        dark: "#9dc183"
       }
     }
   });

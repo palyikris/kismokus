@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
 
   const {email, type, token} = await req.json();
-  const apartmanType = type === "Kismókus Vendégház";
+  const apartmanType = "Kismókus Vendégház";
 
   const message = `
   Kedves Vendégünk!<br><br>
@@ -27,12 +27,7 @@ export async function POST(req) {
   });
 
   // Email options;
-  let mailOptions = {
-    from: process.env.EMAIL_USERNAME,
-    to: email,
-    subject: "Hogy telt a nyaralás Lellén?",
-    html: message
-  }
+  let mailOptions = { from: process.env.EMAIL_USERNAME, to: email, subject: "Hogy telt a nyaralás a Kismókusban?", html: message };
 
   try {
     // Send email

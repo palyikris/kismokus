@@ -23,29 +23,12 @@ export default function ReservationPage() {
 
   let router = useRouter();
 
-  return (
-    <div className={styles.container}>
+  return <div className={styles.container}>
       <Topnav />
       <div className={styles.heroSections}>
-        <Image
-          src={"/narancslemente.jpg"}
-          alt="Balaton part naplemente"
-          layout="fill"
-          objectFit="cover"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABKUlEQVQ4jZ2Tz0vDQBDGJx"
-          priority={true}
-        />
-        <motion.div
-          className={styles.heroElements}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 15 }}
-          transition={{ duration: 0.5, delay: 0.25, ease: "easeInOut" }}
-        >
-          <h1>
-            Foglaljon egy <span>Dream</span> helyszínen!
-          </h1>
+        <Image src={"/narancslemente.jpg"} alt="Balaton part naplemente" layout="fill" objectFit="cover" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABKUlEQVQ4jZ2Tz0vDQBDGJx" priority={true} />
+        <motion.div className={styles.heroElements} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.5, delay: 0.25, ease: "easeInOut" }}>
+          <h1>Foglalás gyorsan és egyszerűen.</h1>
           <p>Köszönjük, hogy nálunk száll meg!</p>
         </motion.div>
         <div className={styles.apartmans}>
@@ -67,42 +50,28 @@ export default function ReservationPage() {
             <h1>Dream House</h1>
             <p>Egy gyönyörű és hatalmas ház Balatonőszöd partján.</p>
           </motion.button> */}
-          <motion.button
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 15 }}
-            transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-            className={styles.apartman}
-            onClick={() => {
+          {/* <motion.button initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }} className={styles.apartman} onClick={() => {
               setIsDreamApartmanOpen(true);
               setIsDreamHouseOpen(false);
               setIsDreamTopartOpen(false);
               setArrDate(null);
               setDepDate(null);
               router.push("/reservation#reserveInterface");
-            }}
-          >
+            }}>
             <h1>Dream Apartman</h1>
             <p>Balatonlellén 4 apartmannal is tudunk szolgálni.</p>
           </motion.button>
-          <motion.button
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 15 }}
-            transition={{ duration: 0.5, delay: 0.75, ease: "easeInOut" }}
-            className={styles.apartman}
-            onClick={() => {
+          <motion.button initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.5, delay: 0.75, ease: "easeInOut" }} className={styles.apartman} onClick={() => {
               setIsDreamTopartOpen(true);
               setIsDreamHouseOpen(false);
               setIsDreamApartmanOpen(false);
               setArrDate(null);
               setDepDate(null);
               router.push("/reservation#reserveInterface");
-            }}
-          >
+            }}>
             <h1>Dream Tópart</h1>
             <p>Balatonlellén, a kertből kilépve már a part vár.</p>
-          </motion.button>
+          </motion.button> */}
         </div>
       </div>
       <div id="reserveInterface">
@@ -110,14 +79,9 @@ export default function ReservationPage() {
         {/* {isDreamHouseOpen
           ? <ReserveInterfaceComponent title="Dream House" />
           : <div />} */}
-        {isDreamApartmanOpen
-          ? <ReserveInterfaceComponent title="Dream Apartman" />
-          : <div />}
-        {isDreamTopartOpen
-          ? <ReserveInterfaceComponent title="Dream Tópart" />
-          : <div />}
+        <ReserveInterfaceComponent title="Dream Apartman" /> : <div />
+        {/* {isDreamTopartOpen ? <ReserveInterfaceComponent title="Dream Tópart" /> : <div />} */}
       </div>
       <Footer />
-    </div>
-  );
+    </div>;
 }

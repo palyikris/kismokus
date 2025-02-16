@@ -23,71 +23,71 @@ export default function ReservationTable(props) {
       title: "Biztos törlöd?",
       text: "Ezt nem lehet visszacsinálni!",
       icon: "warning",
+      iconColor: "#eb7d56",
       showCancelButton: true,
-      confirmButtonColor: "#C35355",
-      cancelButtonColor: "#daa06d",
+      confirmButtonColor: "#eb7d56",
+      cancelButtonColor: "#9dc183",
       cancelButtonText: "Mégse",
-      confirmButtonText: "Igen, töröld!",
-    }).then((result) => {
+      confirmButtonText: "Igen, töröld!"
+    }).then(result => {
       if (result.isConfirmed) {
         DeleteReservation(type, id).then(() => {
           Swal.fire({
             title: "Törölve!",
             text: "Ezt a foglalást már nem találod sehol.",
             icon: "success",
+            iconColor: "#9dc183",
             confirmButtonText: "Rendben",
-            confirmButtonColor: "#daa06d"
-          }).then((result) => {
+            confirmButtonColor: "#9dc183"
+          }).then(result => {
             if (result.isConfirmed) {
               setNOfRows(nOfRows - 1);
               setIsLoading(false);
             }
-          })
-          
+          });
         });
-      }
-      else{
-        setIsLoading(false)
+      } else {
+        setIsLoading(false);
       }
     });
-    
   };
 
   const HandleInvSend = (type, email, name) => {
-    setIsLoading(true)
-    console.log(type, email)
+    setIsLoading(true);
+    console.log(type, email);
     let token = makeId(20); // prompt: making an id for the new reservation in the database
     token = token.replace(/\s+/g, "");
     Swal.fire({
       title: "Biztos elküldöd?",
       text: "Ezt nem lehet visszacsinálni!",
       icon: "warning",
+      iconColor: "#eb7d56",
       showCancelButton: true,
-      confirmButtonColor: "#007F4D",
-      cancelButtonColor: "#daa06d",
+      confirmButtonColor: "#4a9384",
+      cancelButtonColor: "#9dc183",
       cancelButtonText: "Mégse",
-      confirmButtonText: "Igen, elküldöm!",
-    }).then((result) => {
+      confirmButtonText: "Igen, elküldöm!"
+    }).then(result => {
       if (result.isConfirmed) {
         SendInvitation(email, token, name, type).then(() => {
           Swal.fire({
             title: "Elküldve!",
             text: "A vendég rövidesen megkapja az emailt.",
             icon: "success",
+            iconColor: "#9dc183",
             confirmButtonText: "Rendben",
-            confirmButtonColor: "#daa06d"
-          }).then((result) => {
+            confirmButtonColor: "#9dc183"
+          }).then(result => {
             if (result.isConfirmed) {
               setIsLoading(false);
             }
-          })
+          });
         });
-      }
-      else{
-        setIsLoading(false)
+      } else {
+        setIsLoading(false);
       }
     });
-  }
+  };
 
   useEffect(
     () => {
@@ -124,8 +124,7 @@ export default function ReservationTable(props) {
   }
 
   if (reservations.length === 0) {
-    return (
-      <div className={styles.reservationTable}>
+    return <div className={styles.reservationTable}>
         <div className={styles.reservation}>
           <div className={styles.reservationData}>
             <div className={styles.data}>Név</div>
@@ -139,20 +138,17 @@ export default function ReservationTable(props) {
             <div className={styles.data}>Comment</div>{" "}
           </div>
           <div className={styles.seen}>
-            <input
-              type="text"
-              value={nOfRows}
-              onChange={e => {
+            <input type="text" value={nOfRows} onChange={e => {
                 setNOfRows(e.target.value);
-              }}
-              placeholder={reservations.length}
-            />
+              }} placeholder={reservations.length} />
           </div>
         </div>
-        <Loader main={false} />
-        <h1>Nincs foglalás</h1>
-      </div>
-    );
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }}>
+          <h1 style={{ color: "white" }}>
+            Nincs foglalás
+          </h1>
+        </div>
+      </div>;
   }
 
   return (
