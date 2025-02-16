@@ -5,7 +5,7 @@
 import GlobalContextProvider from "@/context/globalcontext";
 import "./globals.css";
 import GlobalDateContextProvider from "@/context/datecontext";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({ children }) {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
               name="viewport"
               content="width=device-width, initial-scale=1.0"
             />
-            <title>Dream Komplexumok</title>
+            <title>Kismókus Vendégház</title>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link
               rel="preconnect"
@@ -43,11 +43,11 @@ export default function RootLayout({ children }) {
             />
             <meta
               name="description"
-              content="A Dream Komplexumok egy két helyből álló, összesen 7 apartmannal rendelkező komplexum. BalatonLellén, ha a tóparton, vagy a városhoz közel szeretne pihenni, velünk mind megteheti. Kattintson és foglaljon már most!"
+              content="A Kismókus Vendégház egy Nagymaroson található, 4 szobás, 10 férőhelyes vendégház. Ha Dunakanyarban szeretne pihenni, velünk mind megteheti. Kattintson és foglaljon már most!"
             />
             <meta
               name="keywords"
-              content="Dream, apartman, Dream apartman, BalatonLelle, lelle, tópart, szállás"
+              content="Kismókus, vendégház, kismókus, dunakanyar, Nagymaros, erdő, szállás"
             />
             <meta
               name="robots"
