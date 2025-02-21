@@ -15,6 +15,7 @@ import { GenerateDate } from "@/lib/generatedate";
 import { createTheme, ThemeProvider } from "@mui/material";
 import styled from "@emotion/styled";
 import { PickersDay } from "@mui/x-date-pickers";
+import "dayjs/locale/hu";
 
 export default function DepartureCalendar(props) {
   let { arrDate, setDepDate } = useGlobalDate();
@@ -101,7 +102,7 @@ export default function DepartureCalendar(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="hu">
         <DemoContainer components={["DateCalendar", "DateCalendar"]}>
           <DemoItem>
             <DateCalendar

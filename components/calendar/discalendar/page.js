@@ -6,6 +6,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { useState } from "react";
 import { AddZero } from "@/lib/addzero";
+import "dayjs/locale/hu";
 
 export default function DisabledCalendar(props) {
   let { defValue } = props;
@@ -16,7 +17,7 @@ export default function DisabledCalendar(props) {
   let [value, setValue] = useState(dayjs(defValue));
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="hu">
       <DemoContainer components={["DateCalendar", "DateCalendar"]}>
         <DemoItem>
           <DateCalendar
