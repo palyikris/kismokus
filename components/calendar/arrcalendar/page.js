@@ -8,7 +8,9 @@ import { useState } from "react";
 import { AddZero } from "@/lib/addzero";
 import { useGlobalDate } from "@/context/datecontexthook";
 import Loader from "@/components/loader/page";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, styled, ThemeProvider } from "@mui/material";
+import { PickersDay } from "@mui/x-date-pickers";
+import "dayjs/locale/hu";
 
 export default function ArrivalCalendar(props) {
   let { setArrDate } = useGlobalDate();
@@ -43,9 +45,20 @@ export default function ArrivalCalendar(props) {
     return datesReserved.includes(dateString);
   };
 
+  const CustomDay = styled(PickersDay, {
+    shouldForwardProp: prop => prop !== "disabledDay"
+  })(({ theme, disabledDay }) => ({
+    ...(disabledDay && {
+      textDecoration: "line-through",
+      opacity: 0.6,
+      pointerEvents: "none",
+      cursor: "not-allowed"
+    })
+  }));
+
   return (
     <ThemeProvider theme={theme}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="hu">
         <DemoContainer components={["DateCalendar", "DateCalendar"]}>
           <DemoItem>
             <DateCalendar
@@ -58,16 +71,28 @@ export default function ArrivalCalendar(props) {
               showDaysOutsideCurrentMonth
               disablePast
               fixedWeekNumber={6}
-              maxDate={dayjs(dateForCalendarMaxValue)} //   sx={{
-              //     bgcolor: "#e9c6a7",
-              //     borderRadius: "10px"
-              //   }}
+              maxDate={dayjs(dateForCalendarMaxValue)}
               shouldDisableDate={disableDates}
               className={styles.calendar}
+              slots={{
+                day: props => {
+                  const isDisabled = disableDates(props.day);
+                  console.log(props);
+
+                  return (
+                    <CustomDay
+                      {...props}
+                      disabledDay={isDisabled || props.disabled}
+                    >
+                      {props.day.date()}
+                    </CustomDay>
+                  );
+                }
+              }}
             />
           </DemoItem>
         </DemoContainer>
       </LocalizationProvider>
-    </ThemeProvider>    
+    </ThemeProvider>
   );
 }

@@ -203,9 +203,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .reserveForm .calendarData .calendar {
+  margin: 0 1rem;
   padding: 1rem 0;
 }
 .reserveForm .calendarData .calendar label {

@@ -111,10 +111,11 @@
   }
 
   .calendarData {
-    @include centerDiv(column);
+    @include centerDiv(row);
+    flex-wrap: wrap;
 
     .calendar {
-
+      margin: 0 1rem;
       padding: 1rem 0;
 
       label {
