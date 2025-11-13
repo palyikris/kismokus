@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import ReserveForm from "../reserveform/page";
 import Swal from "sweetalert2";
+import { PawPrint } from 'lucide-react';
+
 
 export default function ReserveApartmanComponent(props) {
   let [apartmanNumber, setApartmanNumber] = useState(0);
@@ -42,18 +44,17 @@ export default function ReserveApartmanComponent(props) {
               setApartmanNumber(1);
               router.push("/reservation#reserveFocus");
             }}>
-            <h3>Fő Apartman</h3>
+            <h3>A Házikó</h3>
             <div className={styles.sep} />
             <div className={styles.desc}>
               {isHuf ? <p>
-                    Férőhely: 4 - 6 fő, Lakóterület: 65 m<sup>2</sup>, Szobák száma: 1 nappali + étkező, 2 Hálószoba, Konyha, Fürdőszoba zuhanyzóval, Külön WC, Terasz
+                    Férőhely: 4 fő, Szobák száma: 1 amerikai konyhás nappali, 2 Hálószoba, Fürdőszoba, Terasz
                   </p> : <p>
-                    Space: 4 - 6 person, Area 65 m<sup>2</sup>, Number of rooms: 1 living room + 1 dining room, 2 bedrooms, Kitchen, Bathroom with shower, 1 Separate Toilette, Terrace
+                    Space: 4 person, Number of rooms: 1 american living room, 2 bedrooms, Bathroom, Terrace
                   </p>}
               <div className={styles.price}>
-                {isHuf ? <p>12800 HUF/fő/éj</p> : <p>32 EUR/person/night</p>}
-                {isHuf ? <p>Minimum 4 fő</p> : <p>At least 4 people</p>}
-                {isHuf ? <p>Minimum 4 éjszaka</p> : <p>At least 4 nights</p>}
+                {isHuf ? <p>12800 HUF/éj</p> : <p>32 EUR/night</p>}
+                {isHuf ? <p>Minimum 2 éjszaka</p> : <p>At least 2 nights</p>}
               </div>
             </div>
             <div className={styles.sep} />
@@ -79,21 +80,19 @@ export default function ReserveApartmanComponent(props) {
                 <p>Ingyenes parkolás</p>
               </div>
               <div className={styles.service}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                  <path d="M9.375 3a1.875 1.875 0 000 3.75h1.875v4.5H3.375A1.875 1.875 0 011.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0112 2.753a3.375 3.375 0 015.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 10-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3zM11.25 12.75H3v6.75a2.25 2.25 0 002.25 2.25h6v-9zM12.75 12.75v9h6.75a2.25 2.25 0 002.25-2.25v-6.75h-9z" />
-                </svg>
-                <p>Gyermek játszótér</p>
+                <PawPrint></PawPrint>
+                <p>Kutyabarát</p>
               </div>
             </div>
           </div>
-          <div className={styles.pic} onClick={() => {
+          {/* <div className={styles.pic} onClick={() => {
               setApartmanNumber(1);
               if (apartmanNumber != 0) {
                 router.push(`/reservation/images/${type}/${apartmanNumber}`);
               }
             }}>
             <p className={styles.caption}>Duplaklikk a képekért</p>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* <div className={styles.apartman}>

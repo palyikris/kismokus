@@ -26,7 +26,7 @@ export default function ReservationPage() {
   return <div className={styles.container}>
       <Topnav />
       <div className={styles.heroSections}>
-        <Image src={"/narancslemente.jpg"} alt="Balaton part naplemente" layout="fill" objectFit="cover" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABKUlEQVQ4jZ2Tz0vDQBDGJx" priority={true} />
+        <Image src={"/foglalas.jpg"} alt="Balaton part naplemente" layout="fill" objectFit="cover" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABKUlEQVQ4jZ2Tz0vDQBDGJx" priority={true} />
         <motion.div className={styles.heroElements} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.5, delay: 0.25, ease: "easeInOut" }}>
           <h1>Foglalás gyorsan és egyszerűen.</h1>
           <p>Köszönjük, hogy nálunk száll meg!</p>

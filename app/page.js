@@ -20,7 +20,7 @@ export default function Page() {
   return <div className={styles.container}>
       <Topnav />
       <div className={styles.heroSections}>
-        <Image src={"/partdark.jpg"} alt="Balaton part" layout="fill" objectFit="cover" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABKUlEQVQ4jZ2Tz0vDQBDGJx" priority={true} />
+        <Image src={"/terasz.jpg"} alt="Balaton part" layout="fill" objectFit="cover" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABKUlEQVQ4jZ2Tz0vDQBDGJx" priority={true} />
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.5, delay: 0.25, ease: "easeInOut" }} className={styles.heroElements}>
           <h1>
             <button onClick={() => {

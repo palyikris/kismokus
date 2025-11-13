@@ -139,7 +139,7 @@
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
-.reserveForm .data .input .input:not(:-moz-placeholder-shown) ~ label {
+.reserveForm .data .input .input:not(:-moz-placeholder) ~ label {
   top: -20px;
   font-size: 14px;
   color: #9dc183;

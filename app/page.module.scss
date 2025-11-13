@@ -114,7 +114,7 @@
       }
 
       .pic {
-        background-image: url("../public/lellehazdark.jpeg");
+        background-image: url("../public/haz.jpg");
         @include pic();
         height: 20rem;
         width: 60%;
@@ -555,6 +555,7 @@
   }
 
   .heroSections {
+
     // padding-left: 1rem !important;
     .heroElements {
       width: 95% !important;

@@ -16,8 +16,7 @@
   right: 0;
   top: 0;
   background-color: rgba(157, 193, 131, 0.2);
-  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
-          clip-path: polygon(100% 0, 0 0, 0 100%);
+  clip-path: polygon(100% 0, 0 0, 0 100%);
 }
 .container::after {
   content: "";
