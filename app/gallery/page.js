@@ -14,7 +14,7 @@ export default async function GalleryPage() {
 	return (
     <main className="page-root" style={{ padding: "28px 20px" }}>
       <Topnav isReversed></Topnav>
-			<span style={{margin: "5rem 0"}}></span>
+			<div style={{margin: "3rem 0", width: 5, height: 5}}></div>
 			<GalleryClient images={images || []} />
 		</main>
 	);
