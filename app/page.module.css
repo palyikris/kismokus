@@ -21,7 +21,7 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
   border: 2px solid #9dc183;
   padding: 1rem;
   padding-bottom: 2rem;
@@ -53,7 +53,7 @@
   text-align: left;
 }
 .container .heroSections .heroElements h1 {
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 1rem;
 }
 .container .heroSections .heroElements h1 button {
@@ -66,7 +66,7 @@
   font-style: italic;
   background-color: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .container .heroSections .heroElements .icons {
   display: flex;
@@ -87,12 +87,13 @@
 .container .heroSections .heroElements .icons .icon svg {
   width: 1.5rem;
   color: #9dc183;
+  margin-right: 1rem;
 }
 .container .heroSections .heroElements .icons .icon p {
   font-style: normal;
   font-size: 1rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
   color: white;
 }
 .container .detailElement {

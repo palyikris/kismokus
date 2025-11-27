@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Head from "next/head";
 import Loader from "@/components/loader/page";
+import {Bed, Flame, TreePine, Palette} from "lucide-react"
+
 
 export default function Page() {
   let router = useRouter();
@@ -21,34 +23,33 @@ export default function Page() {
       <Topnav />
       <div className={styles.heroSections}>
         <Image src={"/terasz.jpg"} alt="Balaton part" layout="fill" objectFit="cover" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABKUlEQVQ4jZ2Tz0vDQBDGJx" priority={true} />
-        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.5, delay: 0.25, ease: "easeInOut" }} className={styles.heroElements}>
+        {/* dark overlay */}
+        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.65)", zIndex: 1 }} />
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.5, delay: 0.25, ease: "easeInOut" }} className={styles.heroElements} style={{ position: "relative", zIndex: 2 }}>
           <h1>
             <button onClick={() => {
                 router.push("/auth/login");
               }}>
-              Kismókus
+              Marosi Mókus
             </button> Vendégház Nagymaroson
           </h1>
-          <Link href="/reservation">Foglald le most a nyárra!</Link>
+          <Link href="/reservation">Foglald le most!</Link>
           <div className={styles.icons}>
             <div className={styles.icon}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-                <path fillRule="evenodd" d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
-                <path d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
-              </svg>
-              <p>Egyszerű foglalás</p>
+              <Bed></Bed>
+              <p>Kényelmes, otthoni berendezés</p>
             </div>
             <div className={styles.icon}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z" clipRule="evenodd" />
-              </svg>
-              <p>Könnyű tervezés</p>
+              <Flame></Flame>
+              <p>Kandalló a meghitt estékhez</p>
             </div>
             <div className={styles.icon}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z" clipRule="evenodd" />
-              </svg>
-              <p>Boldog nyaralók</p>
+              <TreePine></TreePine>
+              <p>Erdő közelsége</p>
+            </div>
+            <div className={styles.icon}>
+                <Palette></Palette>
+                <p>Vintage stílus, egyedi hangulat</p>
             </div>
           </div>
         </motion.div>
@@ -58,20 +59,25 @@ export default function Page() {
           <div className={styles.pic} />
           <div className={styles.helper} />
           <div className={styles.text}>
-            <p>Kismókus</p>
+            <p>Marosi Mókus</p>
           </div>
         </div>
         <div className={styles.details}>
           <h1>
-            Üdv a <span>Kismókus</span> vendégház oldalán!
-          </h1>
+            🌿 Marosi <span>Mókus</span> vendégház Nagymaroson
+        </h1>
+        <h4>
+          <i>Az erdő szélén, mesebeli hangulatban</i>
+        </h4>
           <div className={styles.sep} />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-            corrupti? Laboriosam consequatur deleniti cupiditate reiciendis
-            blanditiis suscipit quo tenetur quisquam aliquam corrupti
-            architecto tempore esse magni laborum, iste dolores. Quibusdam.
-          </p>
+            Képzeld el, ahogy reggel madárcsicsergésre ébredsz, miközben a fák lombjai között átszűrődik a napfény. Nagymarosi vendégházunk egy igazi kis mesebeli házikó közel az erdőhöz, vintage hangulattal, kandallóval és természetközeli nyugalommal.
+        </p>
+        <p style={{
+          marginTop: 8
+        }}>
+            A ház 2–4 fő számára ideális, tökéletes választás pároknak, barátoknak vagy kis családoknak, akik elvonulnának a világ zajától. A környék túraútvonalakat, Duna-parti sétákat és csendes kikapcsolódást kínál.
+        </p>
           <div className={styles.sep} />
           <motion.button initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.25, ease: "easeInOut" }} onClick={() => {
               router.push("/reservation");
@@ -146,14 +152,14 @@ export default function Page() {
           </div>
         </motion.div>
       </div> */}
-      <div className={styles.myReservationRoute}>
+      {/* <div className={styles.myReservationRoute}>
         <motion.button initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 25 }} transition={{ duration: 0.2, delay: 0.2, ease: "easeInOut" }} onClick={() => {
             router.push("/#myreservation");
           }}>
           Kíváncsi foglalására?
         </motion.button>
-      </div>
-      <form className={styles.myReservation} id="myreservation" onSubmit={e => {
+      </div> */}
+      {/* <form className={styles.myReservation} id="myreservation" onSubmit={e => {
           e.preventDefault();
           router.push(`/restracker/${trackId}`);
         }}>
@@ -169,7 +175,7 @@ export default function Page() {
           }}>
           Megnézem
         </button>
-      </form>
+      </form> */}
       <Footer />
     </div>;
 }

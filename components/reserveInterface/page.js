@@ -9,7 +9,7 @@ export default function ReserveInterfaceComponent(props) {
   return (
     <div className={styles.container}>
       <h1>
-        Kismókus Vendégház
+        Marosi Mókus Vendégház
       </h1>
       {/* {title === "Dream House" ? (<ReserveHouseComponent type="dreamhouse"></ReserveHouseComponent>) : (<></>)} */}
       {title === "Dream Apartman" ? (<ReserveApartmanComponent type="dreamapartman"></ReserveApartmanComponent>) : (<></>)}
