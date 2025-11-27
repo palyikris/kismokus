@@ -135,12 +135,11 @@ export default function ReserveForm(props) {
     return <div className={styles.reserveForm}>
         <ReserveFormIntro />
         <div className={styles.details} id="code">
-          <h1>Foglalási kód</h1>
+          <h1>Köszönjük!</h1>
           <p>
-            Ezt a kódot érdemes felírni mert a főoldalról ezzel a kóddal lehet
-            ellenőrizni a foglalás részleteit!
+            Foglalását sikeresen rögzítettük. Kellemes pihenést kívánunk!
           </p>
-          <div>
+          {/* <div>
             <label htmlFor="">
               {reservationId}
             </label>
@@ -157,7 +156,7 @@ export default function ReserveForm(props) {
                     <path fillRule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V9.375zm9.586 4.594a.75.75 0 00-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 00-1.06 1.06l1.5 1.5a.75.75 0 001.116-.062l3-3.75z" clipRule="evenodd" />
                   </svg>
                 </button>}
-          </div>
+          </div> */}
         </div>
       </div>;
   }

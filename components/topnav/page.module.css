@@ -1,4 +1,5 @@
-.container {
+.container,
+.reversed {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,8 @@
   justify-content: flex-end;
   padding: 1rem;
 }
-.container .nav {
+.container .nav,
+.reversed .nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +25,8 @@
   border: none;
   position: relative;
 }
-.container .nav::after {
+.container .nav::after,
+.reversed .nav::after {
   content: "";
   width: 0;
   height: 2px;
@@ -33,40 +36,75 @@
   transition: all 0.6s;
   left: 0;
 }
-.container .nav:hover {
+.container .nav:hover,
+.reversed .nav:hover {
   cursor: pointer;
 }
-.container .nav:hover::after {
+.container .nav:hover::after,
+.reversed .nav:hover::after {
   width: 100%;
 }
-.container .nav:hover p {
+.container .nav:hover p,
+.reversed .nav:hover p {
   color: #9dc183;
 }
-.container .nav svg {
+.container .nav svg,
+.reversed .nav svg {
   width: 1.5rem;
   margin-right: 1rem;
   color: #9dc183;
 }
-.container .nav p {
+.container .nav p,
+.reversed .nav p {
   color: white;
   font-size: 1rem;
 }
 
+.reversed {
+  background-color: #9dc183;
+}
+.reversed .nav::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -0.5rem;
+  background-color: white;
+  transition: all 0.6s;
+  left: 0;
+}
+.reversed .nav:hover {
+  cursor: pointer;
+}
+.reversed .nav:hover::after {
+  width: 100%;
+}
+.reversed .nav:hover p {
+  color: white;
+}
+.reversed .nav svg {
+  color: white;
+}
+
 @media only screen and (max-width: 770px) {
-  .container {
+  .container,
+  .reversed {
     justify-content: center;
   }
-  .container .nav {
+  .container .nav,
+  .reversed .nav {
     margin-right: 0;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 450px) {
-  .container {
+  .container,
+  .reversed {
     flex-wrap: wrap;
     padding-top: 0;
   }
-  .container .nav {
+  .container .nav,
+  .reversed .nav {
     padding: 0.5rem 1rem;
   }
 }/*# sourceMappingURL=page.module.css.map */

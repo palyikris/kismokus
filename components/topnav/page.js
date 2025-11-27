@@ -79,30 +79,12 @@ export default function Topnav( {
   return ( // <BasicAnimationWrapper>
 
     <div className= {
-      `$ {
-        styles.container
-      }
-
-      $ {
-        isReversed ? styles.reversed : ""
-      }
-
-      `
+      `${isReversed ? styles.reversed : styles.container}`
     }
 
     > {
       links.map((link, index)=> {
           const isActive=links[index].href===path;
-
-          const btnClass=`$ {
-            styles.nav
-          }
-
-          $ {
-            isActive ? styles.active : ""
-          }
-
-          `;
 
           return (<motion.button whileHover= {
                 {
@@ -117,7 +99,7 @@ export default function Topnav( {
             }
 
             className= {
-              btnClass
+              styles.nav
             }
 
             key= {

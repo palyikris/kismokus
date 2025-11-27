@@ -78,7 +78,12 @@ export default function GalleryClient({ images = [] }) {
               priority
               unoptimized
             />
-            <div className={styles.caption}>{`${openIndex + 1} / ${images.length}`}</div>
+            <div className={styles.caption} style={{
+              position: "absolute",
+              bottom: 20,
+              right: 20,
+              color: "black"
+            }}>{`${openIndex + 1} / ${images.length}`}</div>
           </div>
           <button className={styles.next} onClick={(e) => { e.stopPropagation(); next(); }} aria-label="Next">
             ›

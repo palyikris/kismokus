@@ -1,6 +1,7 @@
 @import "../../uniform/style.module";
 
-.container {
+.container,
+.reversed {
   @include centerDiv(row);
   position: absolute;
   z-index: 1000;
@@ -53,9 +54,45 @@
   }
 }
 
+.reversed {
+  background-color: $main;
+
+  .nav {
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      position: absolute;
+      bottom: -0.5rem;
+      background-color: white;
+      transition: all 0.6s;
+      left: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        width: 100%;
+      }
+
+      p {
+        color: white;
+      }
+    }
+
+    svg {
+      color: white;
+    }
+  }
+}
+
 
 @media only screen and (max-width: 770px) {
-  .container {
+
+  .container,
+  .reversed {
     justify-content: center;
 
     .nav {
@@ -67,7 +104,9 @@
 
 
 @media only screen and (max-width: 450px) {
-  .container {
+
+  .container,
+  .reversed {
     flex-wrap: wrap;
     padding-top: 0;
 
