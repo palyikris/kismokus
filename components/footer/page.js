@@ -8,7 +8,7 @@ export default function Footer() {
         <Image src={"/logo.png"} alt="Marosi mókus" width={200} height={150} className={styles.logo} />
         <div className={styles.logoDescription}>
           <h1>Marosi Mókus Vendégház</h1>
-          <p>Nagyon örülünk, hogy minket választ a kikapcsolódásához!</p>
+          <p>Nagyon örülünk, hogy minket választasz a kikapcsolódásához!</p>
         </div>
       </div>
       <div className={styles.else}>
@@ -21,7 +21,7 @@ export default function Footer() {
           </a>
         </div>
         <div className={styles.social}>
-          <p>Kérjük érdeklődjön telefonon, vagy email-ben:</p>
+          <p>Kérjük érdeklődj telefonon, vagy email-ben:</p>
           <div className={styles.socialApps}>
             <p>+36 20 283 7500</p>
             <p>marosimokus@gmail.com</p>

@@ -37,7 +37,9 @@ export default function Page() {
           <div className={styles.icons}>
             <div className={styles.icon}>
               <Bed></Bed>
-              <p>Kényelmes, otthoni berendezés</p>
+              <p>
+                 A múlt bája, a jelen kényelme
+              </p>
             </div>
             <div className={styles.icon}>
               <Flame></Flame>
@@ -49,7 +51,9 @@ export default function Page() {
             </div>
             <div className={styles.icon}>
                 <Palette></Palette>
-                <p>Vintage stílus, egyedi hangulat</p>
+                <p>
+                  Egyedi stílus, vintage hangulat
+                </p>
             </div>
           </div>
         </motion.div>
@@ -77,6 +81,16 @@ export default function Page() {
           marginTop: 8
         }}>
             A ház 2–4 fő számára ideális, tökéletes választás pároknak, barátoknak vagy kis családoknak, akik elvonulnának a világ zajától. A környék túraútvonalakat, Duna-parti sétákat és csendes kikapcsolódást kínál.
+        </p>
+        <p style={{
+          marginTop: 8
+        }}>
+            Vendégházunk minden részlete kreatív gondossággal készült: egyedi megoldások és szeretettel felújított régi bútorok, ahol a nosztalgikus hangulat találkozik a modern kényelemmel. Az enteriőrben a múlt bája és a jelen praktikuma harmonikusan ötvöződik, így minden vendég különleges élményben részesül.
+        </p>
+        <p style={{
+          marginTop: 8
+        }}>
+            Vendégházunkban egy amerikai konyhás nappali, fürdőszoba, valamint az emeleten két hangulatos hálószoba várja a vendégeket. Minden helyiség hűtő-fűtő klímával felszerelt, így egész évben biztosított a kellemes hőmérséklet és a komfortos pihenés. A házhoz tartozik egy kellemes terasz és egy nagy kert is, ahol lehetőség nyílik közös sütögetésre és igazi kikapcsolódásra a szabadban.
         </p>
           <div className={styles.sep} />
           <motion.button initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.25, ease: "easeInOut" }} onClick={() => {

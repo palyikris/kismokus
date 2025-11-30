@@ -48,12 +48,12 @@ export default function ReserveApartmanComponent(props) {
             <div className={styles.sep} />
             <div className={styles.desc}>
               {isHuf ? <p>
-                    Férőhely: 4 fő, Szobák száma: 1 amerikai konyhás nappali, 2 Hálószoba, Fürdőszoba, Terasz
+                    Férőhely: 4 fő, Szobák száma: 1 amerikai konyhás nappali, 2 Hálószoba, Fürdőszoba, Terasz.
                   </p> : <p>
                     Space: 4 person, Number of rooms: 1 american living room, 2 bedrooms, Bathroom, Terrace
                   </p>}
               <div className={styles.price}>
-                {isHuf ? <p>12800 HUF/éj</p> : <p>32 EUR/night</p>}
+                {isHuf ? <p>30.000 HUF/éj</p> : <p>75 EUR/night</p>}
                 {isHuf ? <p>Minimum 2 éjszaka</p> : <p>At least 2 nights</p>}
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function ReserveApartmanComponent(props) {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                   <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
                 </svg>
-                <p>Nem dohányzó terület</p>
+                <p>Hűtő-fűtő klíma minden helységben</p>
               </div>
               <div className={styles.service}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -77,7 +77,7 @@ export default function ReserveApartmanComponent(props) {
                   <path d="M8.25 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zM15.75 6.75a.75.75 0 00-.75.75v11.25c0 .087.015.17.042.248a3 3 0 015.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 00-3.732-10.104 1.837 1.837 0 00-1.47-.725H15.75z" />
                   <path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
                 </svg>
-                <p>Ingyenes parkolás</p>
+                <p>Ingyenes és zárt parkolás</p>
               </div>
               <div className={styles.service}>
                 <PawPrint></PawPrint>
