@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
               name="viewport"
               content="width=device-width, initial-scale=1.0"
             />
-            <title>Kismókus Vendégház</title>
+            <title>Marosi Mókus Vendégház</title>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link
               rel="preconnect"
@@ -43,16 +43,17 @@ export default function RootLayout({ children }) {
             />
             <meta
               name="description"
-              content="A Kismókus Vendégház egy Nagymaroson található, 4 szobás, 10 férőhelyes vendégház. Ha Dunakanyarban szeretne pihenni, velünk mind megteheti. Kattintson és foglaljon már most!"
+              content="A Marosi Mókus Vendégház egy Nagymaroson található, 4 szobás, 10 férőhelyes vendégház. Ha Dunakanyarban szeretnél pihenni, velünk mind megtehetitek. Kattints és foglalj már most!"
             />
             <meta
               name="keywords"
-              content="Kismókus, vendégház, kismókus, dunakanyar, Nagymaros, erdő, szállás"
+              content="Kismókus, vendégház, kismókus, dunakanyar, Nagymaros, erdő, szállás, maros, marosi, mókus"
             />
             <meta
               name="robots"
               content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
             />
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           </head>
           <body>
             {children}
