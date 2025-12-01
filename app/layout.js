@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
             />
             <meta
               name="description"
-              content="A Marosi Mókus Vendégház egy Nagymaroson található, 4 szobás, 10 férőhelyes vendégház. Ha Dunakanyarban szeretnél pihenni, velünk mind megtehetitek. Kattints és foglalj már most!"
+              content="A Marosi Mókus Vendégház egy Nagymaroson található, 4 szobás, 10 férőhelyes vendégház. Ha Dunakanyarban szeretnél pihenni, velünk megteheted. Kattints és foglalj már most!"
             />
             <meta
               name="keywords"
