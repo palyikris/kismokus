@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Footer() {
-  return <div className={styles.footer}>
+  return <div className={styles.footer} id="footer">
       <div className={styles.logoContainer}>
         <Image src={"/logo.png"} alt="Marosi mókus" width={200} height={150} className={styles.logo} />
         <div className={styles.logoDescription}>
@@ -13,7 +13,7 @@ export default function Footer() {
       </div>
       <div className={styles.else}>
         <div className={styles.documents}>
-          <a href="/hazirend.docx" download={true}>
+          <a href="/hazirend.pdf" download={true}>
             Házirend
           </a>
           <a href="https://ilovedunakanyar.hu/dunakanyar/nagymaros/" target="_blank">

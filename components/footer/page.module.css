@@ -18,9 +18,9 @@
 }
 .footer .logoContainer .logo {
   width: 12rem;
-  height: 10rem;
+  height: 12rem;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 100%;
 }
 .footer .logoContainer .logoDescription {
   display: flex;

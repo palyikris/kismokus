@@ -170,9 +170,9 @@ export default function ReserveForm(props) {
   return <form className={styles.reserveForm} onSubmit={submitData}>
       <ReserveFormIntro />
       {apartmanNumber === 0 ? <h3 id="reserveFocus">
-            Választott apartman száma: Nincs kiválasztva
+            Foglalás adatai
           </h3> : <h3 id="reserveFocus">
-            Választott apartman száma: {apartmanNumber}
+            Foglalás adatai
           </h3>}
       <div className={styles.sep} />
       <div className={styles.data}>

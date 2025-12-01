@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import ReserveForm from "../reserveform/page";
@@ -15,6 +15,9 @@ export default function ReserveApartmanComponent(props) {
   let router = useRouter();
   let { type } = props;
   
+  useEffect(() => {
+    setApartmanNumber(1)
+  }, [])
 
   return <div className={styles.container}>
       <div className={styles.apartman}>
