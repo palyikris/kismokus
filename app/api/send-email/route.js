@@ -12,7 +12,6 @@ export async function POST(req) {
   Érkezés: ${startDate}
   Távozás: ${endDate}
   
-  Az oldalunkon a következő kóddal tudja ellenőrizni a foglalását: ${code}
   Kérjük, ne válaszoljon erre az email-re!
   Kellemes és pihentető nyaralást kívánunk!
 

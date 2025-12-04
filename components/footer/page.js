@@ -8,12 +8,12 @@ export default function Footer() {
         <Image src={"/logo.png"} alt="Marosi mókus" width={200} height={150} className={styles.logo} />
         <div className={styles.logoDescription}>
           <h1>Marosi Mókus Vendégház</h1>
-          <p>Nagyon örülünk, hogy minket választasz a kikapcsolódásához!</p>
+          <p>Nagyon örülünk, hogy minket választasz a kikapcsolódáshoz!</p>
         </div>
       </div>
       <div className={styles.else}>
         <div className={styles.documents}>
-          <a href="/hazirend.pdf" download={true}>
+          <a href="/hazirend.docx" download={true}>
             Házirend
           </a>
           <a href="https://ilovedunakanyar.hu/dunakanyar/nagymaros/" target="_blank">
@@ -25,7 +25,13 @@ export default function Footer() {
           <div className={styles.socialApps}>
             <p>+36 20 283 7500</p>
             <p>marosimokus@gmail.com</p>
-          </div>
+        </div>
+        <div style={{
+          marginTop: "5rem",
+          textDecoration: "underline"
+        }}>
+          <p>2626 Nagymaros, Mosompatak dűlő 1212/9</p>
+        </div>
         </div>
       </div>
     </div>;

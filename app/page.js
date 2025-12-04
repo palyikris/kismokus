@@ -85,7 +85,7 @@ export default function Page() {
         <p style={{
           marginTop: 8
         }}>
-            Vendégházunk minden részlete kreatív gondossággal készült: egyedi megoldások és szeretettel felújított régi bútorok, ahol a nosztalgikus hangulat találkozik a modern kényelemmel. Az enteriőrben a múlt bája és a jelen praktikuma harmonikusan ötvöződik, így minden vendég különleges élményben részesül.
+            Vendégházunk minden részlete kreatív gondossággal készült: egyedi megoldások és szeretettel felújított régi bútorok, ahol a nosztalgikus hangulat találkozik a modern kényelemmel.
         </p>
         <p style={{
           marginTop: 8
