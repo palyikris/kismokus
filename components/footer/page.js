@@ -31,7 +31,7 @@ export default function Footer() {
           textDecoration: "underline",
           color: "white"
         }}>
-          <a href="https://goo.gl/maps/7Qe8msQmMpmppRva9" style={{
+          <a href="https://goo.gl/maps/ixCrdTFLYMY2seNm6" style={{
             color: "white"
           }}>2626 Nagymaros, Mosompatak dűlő 1212/9</a>
         </div>
