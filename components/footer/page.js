@@ -28,9 +28,12 @@ export default function Footer() {
         </div>
         <div style={{
           marginTop: "5rem",
-          textDecoration: "underline"
+          textDecoration: "underline",
+          color: "white"
         }}>
-          <p>2626 Nagymaros, Mosompatak dűlő 1212/9</p>
+          <a href="https://goo.gl/maps/7Qe8msQmMpmppRva9" style={{
+            color: "white"
+          }}>2626 Nagymaros, Mosompatak dűlő 1212/9</a>
         </div>
         </div>
       </div>
