@@ -70,6 +70,7 @@
       .icons {
         @include centerDiv(row);
         margin-top: 3rem;
+        padding: 0 1rem;
 
         .icon {
           @include centerDiv(row);
@@ -548,6 +549,14 @@
   .container .heroSections .heroElements {
     width: 80%;
     padding: 1rem;
+  }
+
+  .container .heroSections .heroElements .icons {
+    align-items: start;
+
+    .icon p {
+      font-size: 0.8rem;
+    }
   }
 }
 

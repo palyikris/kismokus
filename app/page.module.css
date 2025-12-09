@@ -75,6 +75,7 @@
   width: 100%;
   flex-direction: row;
   margin-top: 3rem;
+  padding: 0 1rem;
 }
 .container .heroSections .heroElements .icons .icon {
   display: flex;
@@ -675,6 +676,12 @@
   .container .heroSections .heroElements {
     width: 80%;
     padding: 1rem;
+  }
+  .container .heroSections .heroElements .icons {
+    align-items: start;
+  }
+  .container .heroSections .heroElements .icons .icon p {
+    font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 450px) {

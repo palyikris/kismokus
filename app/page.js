@@ -61,10 +61,10 @@ export default function Page() {
       <div className={styles.detailElement}>
         <div className={styles.picContainer} initial={{ opacity: 0, x: -25 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.25, ease: "easeInOut" }}>
           <div className={styles.pic} />
-          <div className={styles.helper} />
-          <div className={styles.text}>
+          {/* <div className={styles.helper} /> */}
+          {/* <div className={styles.text}>
             <p>Marosi Mókus</p>
-          </div>
+          </div> */}
         </div>
         <div className={styles.details}>
           <h1>
