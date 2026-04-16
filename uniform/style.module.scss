@@ -12,6 +12,70 @@ $green: #698b51;
   flex-direction: $dir;
 }
 
+// Infobox for cancellation policy
+.infobox {
+  background: linear-gradient(120deg, lighten($main, 25%) 0%, lighten($accent1, 30%) 100%);
+  border: 2px solid $main;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px 0 rgba($bg, 0.08);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  margin: 2.5rem auto 2rem auto;
+  max-width: 600px;
+  color: $bg;
+  font-size: 1.08rem;
+  position: relative;
+  transition: box-shadow 0.3s;
+
+  @media (max-width: 700px) {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+}
+
+.infoboxTitle {
+  color: $accent1;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    width: 40%;
+    height: 2px;
+    background: $main;
+    border-radius: 2px;
+  }
+}
+
+.infoboxList {
+  list-style: decimal inside;
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.7em;
+    line-height: 1.5;
+
+    b {
+      color: $bg;
+      background: rgba($main, 0.13);
+      border-radius: 0.4em;
+      padding: 0.1em 0.4em;
+      font-weight: 600;
+    }
+  }
+}
+
+.cancellationBox {
+  border-color: $accent1;
+  background: linear-gradient(120deg, lighten($main, 35%) 0%, lighten($accent1, 40%) 100%);
+  box-shadow: 0 4px 18px 0 rgba($accent1, 0.10);
+}
+
 @mixin pic() {
   background-position: center;
   background-repeat: no-repeat;

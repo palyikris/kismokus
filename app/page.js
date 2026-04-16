@@ -75,22 +75,52 @@ export default function Page() {
         </h4>
           <div className={styles.sep} />
           <p>
-            Képzeld el, ahogy reggel madárcsicsergésre ébredsz, miközben a fák lombjai között átszűrődik a napfény. Nagymarosi vendégházunk egy igazi kis mesebeli házikó közel az erdőhöz, vintage hangulattal, kandallóval és természetközeli nyugalommal.
+            Egy kedves, nyugodt kis ház az erdő szélén, ahol tényleg le lehet lassítani. Reggel
+            madárcsicsergés, este csend, körülötte fák és friss levegő — pont az a fajta hely,
+            ahová jó elbújni pár napra.
         </p>
         <p style={{
           marginTop: 8
         }}>
-            A ház 2–4 fő számára ideális, tökéletes választás pároknak, barátoknak vagy kis családoknak, akik elvonulnának a világ zajától. A környék túraútvonalakat, Duna-parti sétákat és csendes kikapcsolódást kínál.
+            A ház 2–4 fő számára ideális, így pároknak, barátoknak vagy kis családoknak is jó
+            választás. A környéken könnyű séták, túraútvonalak és a Dunapart vár, ha pedig
+            csak pihennétek, arra is tökéletes.
         </p>
         <p style={{
           marginTop: 8
         }}>
-            Vendégházunk minden részlete kreatív gondossággal készült: egyedi megoldások és szeretettel felújított régi bútorok, ahol a nosztalgikus hangulat találkozik a modern kényelemmel.
+            A ház bájos hangulata, minden szobában érződik; egy amerikai konyhás nappali
+            kandallóval, fürdő a földszinten, az emeleten pedig két hálószoba kapott helyet.
+            Minden helyiségben hűtő-fűtő klíma van, így bármikor érkeztek, kellemes lesz a
+            hőmérséklet.
         </p>
         <p style={{
           marginTop: 8
         }}>
-            Vendégházunkban egy amerikai konyhás nappali, fürdőszoba, valamint az emeleten két hangulatos hálószoba várja a vendégeket. Minden helyiség hűtő-fűtő klímával felszerelt, így egész évben biztosított a kellemes hőmérséklet és a komfortos pihenés. A házhoz tartozik egy kellemes terasz és egy nagy kert is, ahol lehetőség nyílik közös sütögetésre és igazi kikapcsolódásra a szabadban.
+            Minden részletre figyeltünk, ami egy hétvégi kikapcsolódáshoz kellhet; az esti
+            filmezéshez a Netflix és a Disney kínálatából választhattok, ha játszanátok valamit, a
+            társasjátékokkal teli ládában biztos találtok valami kedvetekre valót, ha pedig csak
+            olvasgatnátok a polcok tele vannak a legjobb olvasnivalókkal.
+        </p>
+        <p style={{
+          marginTop: 8
+        }}>
+            A konyha pici ugyan, de egy közös főzőcskézésre tökéletes. A reggelihez nespresso
+            és tea bekészítéssel készülünk Nektek.
+        </p>
+        <p style={{
+          marginTop: 8
+        }}>
+            A kis terasz ideális egy esti borozáshoz vagy reggeli kávézáshoz, a nagy teraszon
+            pedig jacuzzi vár Benneteket, ha wellness élményre is vágynátok a fenyőfák alatt. Ha
+            szeretnétek; grillezni, bográcsozni is lehet, az óriási kertben egy nyári konyha is
+            helyet kapott.
+        </p>
+        <p style={{
+          marginTop: 8
+        }}>
+            Ezekkel a szolgáltatásokkal várunk minden pihenni vágyót, aki picit kiszakadna a
+            városi nyüzsgésből, hogy a Dunakanyar egyik legszebb helyén töltődjön!
         </p>
           <div className={styles.sep} />
           <motion.button initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.25, ease: "easeInOut" }} onClick={() => {

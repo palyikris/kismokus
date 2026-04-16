@@ -50,15 +50,134 @@ export default function ReserveApartmanComponent(props) {
             <h3>A Házikó</h3>
             <div className={styles.sep} />
             <div className={styles.desc}>
-              {isHuf ? <p>
-                    Férőhely: 4 fő, Szobák száma: 1 amerikai konyhás nappali, 2 Hálószoba, Fürdőszoba, Terasz.
-                  </p> : <p>
-                    Space: 4 person, Number of rooms: 1 american living room, 2 bedrooms, Bathroom, Terrace
-                  </p>}
-              <div className={styles.price}>
-                {isHuf ? <p>30.000 HUF/éj</p> : <p>75 EUR/night</p>}
-                {isHuf ? <p>Minimum 2 éjszaka</p> : <p>At least 2 nights</p>}
-              </div>
+              {isHuf ? (
+                <>
+                <p>Férőhely: 4 fő, Szobák száma: 1 amerikai konyhás nappali, 2 Hálószoba, Fürdőszoba, Terasz.</p>
+                
+                <p style={{
+                  marginTop: "1rem"
+                }}>
+                  Kutyabarát hely vagyunk, viszont csak a szobatiszta, nem kártékony kutyákat látjuk
+                  szívesen. A kutyusok ingyen szállnak meg nálunk, viszont mindenképpen jelezzétek,
+                  ha házi kedvenccel érkeztek.
+                </p>
+                  <div
+                    className={styles.priceTableWrapper}
+                    style={{
+                      background: "#f6fbf4",
+                      border: "1.5px solid #9dc183",
+                      borderRadius: "1rem",
+                      padding: "1.2rem 1.5rem",
+                      margin: "1.2rem 0 0.5rem 0",
+                      boxShadow: "0 2px 8px 0 rgba(157,193,131,0.08)",
+                      maxWidth: "420px"
+                    }}
+                  >
+                    <h4 style={{
+                      fontWeight: 600,
+                      color: "#698b51",
+                      marginBottom: "0.7rem",
+                      fontSize: "1.13rem",
+                      letterSpacing: "0.01em"
+                    }}>Áraink:</h4>
+                    <ul style={{
+                      listStyle: "none",
+                      padding: 0,
+                      margin: 0,
+                      fontSize: "1rem",
+                      color: "#2f4858"
+                    }}>
+                      <li style={{marginBottom: "0.5rem"}}>Minimum foglalás: <span style={{color: "#698b51"}}>2 éjszaka</span></li>
+                      <li style={{ marginBottom: "0.5rem" }}>
+                      Hétköznap (hétfőtől-péntek reggelig):
+                        <ul style={{
+                          listStyle: "disc inside",
+                          margin: "0.3rem 0 0.3rem 1.2rem",
+                          padding: 0,
+                          color: "#2f4858"
+                        }}>
+                          <li>2 fő: <span style={{color: "#698b51"}}>30.000 Ft/éjszaka/ház</span></li>
+                          <li>3 fő: <span style={{color: "#698b51"}}>40.000 Ft/éjszaka/ház</span></li>
+                          <li>4 fő: <span style={{color: "#698b51"}}>50.000 Ft/éjszaka/ház</span></li>
+                        </ul>
+                      </li>
+                      <li style={{marginBottom: "0.5rem"}}>Hétvégén (péntektől-vasárnapig) és ünnepnapokon:
+                        <ul style={{
+                          listStyle: "disc inside",
+                          margin: "0.3rem 0 0.3rem 1.2rem",
+                          padding: 0,
+                          color: "#2f4858"
+                        }}>
+                          <li>2 fő: <span style={{color: "#698b51"}}>40.000 Ft/éjszaka/ház</span></li>
+                          <li>3 fő: <span style={{color: "#698b51"}}>50.000 Ft/éjszaka/ház</span></li>
+                          <li>4 fő: <span style={{color: "#698b51"}}>60.000 Ft/éjszaka/ház</span></li>
+                        </ul>
+                      </li>
+                      <li style={{marginBottom: "0.5rem"}}>Jacuzzi: <span style={{color: "#9dc183"}}>10.000 Ft/egyszeri díj</span></li>
+                      <li style={{marginBottom: "0.2rem"}}>Gyerekeknek <span style={{color: "#9dc183"}}>6 éves korig ingyenes</span></li>
+                    </ul>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p>Space: 4 person, Number of rooms: 1 american living room, 2 bedrooms, Bathroom, Terrace</p>
+                  <div
+                    className={styles.priceTableWrapper}
+                    style={{
+                      background: "#f6fbf4",
+                      border: "1.5px solid #9dc183",
+                      borderRadius: "1rem",
+                      padding: "1.2rem 1.5rem",
+                      margin: "1.2rem 0 0.5rem 0",
+                      boxShadow: "0 2px 8px 0 rgba(157,193,131,0.08)",
+                      maxWidth: "420px"
+                    }}
+                  >
+                    <h4 style={{
+                      fontWeight: 600,
+                      color: "#698b51",
+                      marginBottom: "0.7rem",
+                      fontSize: "1.13rem",
+                      letterSpacing: "0.01em"
+                    }}>Our prices:</h4>
+                    <ul style={{
+                      listStyle: "none",
+                      padding: 0,
+                      margin: 0,
+                      fontSize: "1rem",
+                      color: "#2f4858"
+                    }}>
+                      <li style={{marginBottom: "0.5rem"}}>Minimum booking: <span style={{color: "#698b51"}}>2 nights</span></li>
+                      <li style={{marginBottom: "0.5rem"}}>Weekdays (Monday to Friday morning):
+                        <ul style={{
+                          listStyle: "disc inside",
+                          margin: "0.3rem 0 0.3rem 1.2rem",
+                          padding: 0,
+                          color: "#2f4858"
+                        }}>
+                          <li>2 persons: <span style={{color: "#698b51"}}>30,000 HUF/night/house</span></li>
+                          <li>3 persons: <span style={{color: "#698b51"}}>40,000 HUF/night/house</span></li>
+                          <li>4 persons: <span style={{color: "#698b51"}}>50,000 HUF/night/house</span></li>
+                        </ul>
+                      </li>
+                      <li style={{marginBottom: "0.5rem"}}>Weekends (Friday to Sunday) and holidays:
+                        <ul style={{
+                          listStyle: "disc inside",
+                          margin: "0.3rem 0 0.3rem 1.2rem",
+                          padding: 0,
+                          color: "#2f4858"
+                        }}>
+                          <li>2 persons: <span style={{color: "#698b51"}}>40,000 HUF/night/house</span></li>
+                          <li>3 persons: <span style={{color: "#698b51"}}>50,000 HUF/night/house</span></li>
+                          <li>4 persons: <span style={{color: "#698b51"}}>60,000 HUF/night/house</span></li>
+                        </ul>
+                      </li>
+                      <li style={{marginBottom: "0.5rem"}}>Jacuzzi: <span style={{color: "#9dc183"}}>10,000 HUF/one-time fee</span></li>
+                      <li style={{marginBottom: "0.2rem"}}>Children under 6 years: <span style={{color: "#9dc183"}}>free</span></li>
+                    </ul>
+                  </div>
+                </>
+              )}
             </div>
             <div className={styles.sep} />
             <div className={styles.services}>

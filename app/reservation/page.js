@@ -83,7 +83,7 @@ export default function ReservationPage() {
         {/* {isDreamHouseOpen
           ? <ReserveInterfaceComponent title="Dream House" />
           : <div />} */}
-        <ReserveInterfaceComponent title="Dream Apartman" />
+        <ReserveInterfaceComponent title="Marosi Mókus" />
         {/* {isDreamTopartOpen ? <ReserveInterfaceComponent title="Dream Tópart" /> : <div />} */}
       </div>
       <Footer />
