@@ -114,7 +114,6 @@ export default function ReserveApartmanComponent(props) {
                         </ul>
                       </li>
                       <li style={{marginBottom: "0.5rem"}}>Jacuzzi: <span style={{color: "#9dc183"}}>10.000 Ft/egyszeri díj</span></li>
-                      <li style={{marginBottom: "0.2rem"}}>Gyerekeknek <span style={{color: "#9dc183"}}>6 éves korig ingyenes</span></li>
                     </ul>
                   </div>
                 </>

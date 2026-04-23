@@ -1,6 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import styles from "./page.module.css";
 import Image from "next/image";
+import Link from "next/link"
 
 export default function Footer() {
   return <div className={styles.footer} id="footer">
@@ -24,7 +25,9 @@ export default function Footer() {
           <p>Kérjük érdeklődj telefonon, vagy email-ben:</p>
           <div className={styles.socialApps}>
             <p>+36 20 283 7500</p>
-            <p>marosimokus@gmail.com</p>
+          <p>marosimokus@gmail.com</p>
+          <Link style={{color:"white"}} href="https://www.facebook.com/profile.php?id=61582562854511">Facebook</Link>
+          <Link style={{color:"white"}} href="https://www.instagram.com/marosi_mokus_vendeghaz">Instagram</Link>
         </div>
         <div style={{
           marginTop: "5rem",

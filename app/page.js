@@ -106,7 +106,7 @@ export default function Page() {
           marginTop: 8
         }}>
             A konyha pici ugyan, de egy közös főzőcskézésre tökéletes. A reggelihez nespresso
-            és tea bekészítéssel készülünk Nektek.
+            és tea bekészítéssel készülünk Nektek. Termelői reggeli kérhető, mely egy ládikóban érkezik az ajtó elé, kizárólag fenntartható termelőktől, 100% friss alapanyagokból, környezetbarát csomagolásban. Választható ládikók és rendelés leadása közvetlenül <Link href="https://www.dunakanyarreggeli.hu">Kavics termelői reggeli oldalán</Link>.
         </p>
         <p style={{
           marginTop: 8

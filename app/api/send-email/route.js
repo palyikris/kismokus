@@ -4,20 +4,17 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   const { email, code, startDate, endDate } = await req.json();
   const message = `
-  Kedves Vendégünk!
-  
-  Köszönjük, hogy a Kismókus Vendégházat választotta. Foglalását sikeresen rögzítettük.
-  Visszaigazolásig várjon kérjük türelemmel, amíg fel nem vesszük Önnel a kapcsolatot.
-  A következő időpontra foglalt:
+  Kedves Leendő Vendégünk!
+
+  Köszönjük, hogy minket választottál pihenésed helyszínéül!
+  A következő időpontra foglaltál:
   Érkezés: ${startDate}
   Távozás: ${endDate}
   
-  Kérjük, ne válaszoljon erre az email-re!
-  Kellemes és pihentető nyaralást kívánunk!
-
-  Üdvözlettel,
-  Verebi Gyöngyi
-  +36 20 283 7500
+  Ezúton küldjük visszaigazolásunkat, hogy megkaptuk foglalási kérésedet, viszont az csak a díjbekérő befizetésével válik véglegessé. Ehhez kérjük küldd el nekünk számlázási adataidat (név, cím). Köszönjük!
+  
+  Marosi Mókus Vendégház
+  +36202837500
   
   `;
 
