@@ -29,7 +29,7 @@ export async function POST(req) {
 
   let mailOptions = {};
   // Email options;
-  mailOptions = { from: process.env.EMAIL_USERNAME, to: "kismokusvendeghaz@gmail.com", subject: "Új Foglalás", text: message };
+  mailOptions = { from: process.env.EMAIL_USERNAME, to: "marosimokus@gmail.com", subject: "Új Foglalás", text: message };
     
 
   try {
